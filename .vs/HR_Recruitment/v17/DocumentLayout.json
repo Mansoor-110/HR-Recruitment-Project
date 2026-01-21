@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\asp.aptechnk1\\source\\repos\\hr_recruitment\\hr_recruitment\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\asp.aptechnk1\\source\\repos\\hr_recruitment\\hr_recruitment\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\asp.aptechnk1\\source\\repos\\hr_recruitment\\hr_recruitment\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\asp.aptechnk1\\source\\repos\\hr_recruitment\\hr_recruitment\\views\\home\\job_details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\home\\job_details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\asp.aptechnk1\\source\\repos\\hr_recruitment\\hr_recruitment\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\asp.aptechnk1\\source\\repos\\hr_recruitment\\hr_recruitment\\views\\home\\blog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\home\\blog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\asp.aptechnk1\\source\\repos\\hr_recruitment\\hr_recruitment\\views\\home\\blog_details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\home\\blog_details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\asp.aptechnk1\\source\\repos\\hr_recruitment\\hr_recruitment\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\asp.aptechnk1\\source\\repos\\hr_recruitment\\hr_recruitment\\views\\home\\findjob.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\home\\findjob.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Contact.cshtml",
+              "DocumentMoniker": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Views\\Home\\Contact.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Home\\Contact.cshtml",
+              "ToolTip": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Views\\Home\\Contact.cshtml",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Home\\Contact.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwCIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T11:41:02.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Job_Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Views\\Home\\Job_Details.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Home\\Job_Details.cshtml",
+              "ToolTip": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Views\\Home\\Job_Details.cshtml",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Home\\Job_Details.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAACMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T11:39:31.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Blog_Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Views\\Home\\Blog_Details.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Home\\Blog_Details.cshtml",
+              "ToolTip": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Views\\Home\\Blog_Details.cshtml",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Home\\Blog_Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T11:34:18.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Blog.cshtml",
+              "DocumentMoniker": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Views\\Home\\Blog.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Home\\Blog.cshtml",
+              "ToolTip": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Views\\Home\\Blog.cshtml",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Home\\Blog.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T11:29:05.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Home\\About.cshtml",
+              "ToolTip": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Home\\About.cshtml",
+              "ViewState": "AgIAABAAAAAAAAAAAAAqwCYAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T11:26:30.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FindJob.cshtml",
+              "DocumentMoniker": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Views\\Home\\FindJob.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Home\\FindJob.cshtml",
+              "ToolTip": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Views\\Home\\FindJob.cshtml",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Home\\FindJob.cshtml",
+              "ViewState": "AgIAANIAAAAAAAAAAAAswOEAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T11:24:36.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABEAAAAAAAAAAAAwwCYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T11:20:14.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAqwEkAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T11:12:58.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "HR_Recruitment\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T11:11:52.119Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
