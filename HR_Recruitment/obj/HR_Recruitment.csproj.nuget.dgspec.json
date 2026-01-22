@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\HR_Recruitment.csproj": {}
+    "C:\\Users\\asp.APTECHNK1\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\HR_Recruitment.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\HR_Recruitment.csproj": {
+    "C:\\Users\\asp.APTECHNK1\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\HR_Recruitment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\HR_Recruitment.csproj",
+        "projectUniqueName": "C:\\Users\\asp.APTECHNK1\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\HR_Recruitment.csproj",
         "projectName": "HR_Recruitment",
-        "projectPath": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\HR_Recruitment.csproj",
+        "projectPath": "C:\\Users\\asp.APTECHNK1\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\HR_Recruitment.csproj",
         "packagesPath": "C:\\Users\\asp.APTECHNK1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asp.APTECHNK1\\source\\repos\\HR_Recruitment\\HR_Recruitment\\obj\\",
+        "outputPath": "C:\\Users\\asp.APTECHNK1\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -51,6 +51,24 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.22, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,3 +1,7 @@
+wwwroot\Admin\assets\css\style.css
+wwwroot\Admin\assets\imgs\customer01.jpg
+wwwroot\Admin\assets\imgs\customer02.jpg
+wwwroot\Admin\assets\js\main.js
 wwwroot\assets\css\animate.min.css
 wwwroot\assets\css\bootstrap.min.css
 wwwroot\assets\css\flaticon.css
