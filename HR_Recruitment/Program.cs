@@ -5,12 +5,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSession();
 
 
-var provider = builder.Services.BuildServiceProvider(); var config = provider.GetRequiredService<IConfiguration>();
+var provider = builder.Services.BuildServiceProvider();
+
+var config = provider.GetRequiredService<IConfiguration>();
 
 
-builder.Services.AddDbContext<AppDbContext>(item => item.UseSqlServer(config.GetConnectionString("connect")));
+builder.Services.AddDbContext<RecruitmentSystemContext>(item => item.UseSqlServer(config.GetConnectionString("connect")));
 
 
 var app = builder.Build();
@@ -28,6 +31,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseSession();
 app.UseAuthorization();
 
 app.MapControllerRoute(

@@ -198,8 +198,11 @@ wwwroot\assets\scss\_support-company.scss
 wwwroot\assets\scss\_team.scss
 wwwroot\assets\scss\_testimonial.scss
 wwwroot\assets\scss\_variables.scss
+wwwroot\css\custom.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\vacancies\calculator-6147116_1280.png
+wwwroot\images\vacancies\web developer.webp
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map

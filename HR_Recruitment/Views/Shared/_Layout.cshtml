@@ -1,4 +1,9 @@
-﻿<!doctype html>
+﻿@{
+
+   
+}
+
+<!doctype html>
 <html class="no-js" lang="zxx">
 <head>
     <meta charset="utf-8">
@@ -63,7 +68,7 @@
                                                 <ul class="submenu">
                                                     <li><a asp-action="Blog">Blog</a></li>
                                                     <li><a asp-action="Blog_Details">Blog Details</a></li>
-                                                    <li><a asp-action="Job_Details">job Details</a></li>
+                                                    <li><a asp-action="JobDetails">job Details</a></li>
                                                 </ul>
                                             </li>
                                             <li><a asp-action="Contact">Contact</a></li>
@@ -72,8 +77,17 @@
                                 </div>
                                 <!-- Header-btn -->
                                 <div class="header-btn d-none f-right d-lg-block">
-                                    <a href="~/#" class="btn head-btn1">Register</a>
-                                    <a href="~/#" class="btn head-btn2">Login</a>
+                                    @if (Context.Session.GetInt32("UserId") != null)
+                                    {
+                                        
+                                        <a asp-action="Logout" asp-controller="Auth" class="btn head-btn2">Logout</a>
+                                    }
+                                    else
+                                    {
+                                        
+                                    <a asp-action="Register" asp-controller="Auth" class="btn head-btn1">Register</a>
+                                    <a asp-action="Login" asp-controller="Auth" class="btn head-btn2">Login</a>
+                                    }
                                 </div>
                             </div>
                         </div>

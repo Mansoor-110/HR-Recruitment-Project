@@ -1,0 +1,287 @@
+﻿@model Vacancy;
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    
+<style>
+    /* ====================== Vacancy Form Styles ========================== */
+    .vacancy-form-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: var(--white);
+        border-radius: 20px;
+        box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+    }
+
+    .vacancy-form-header {
+        background: linear-gradient(135deg, var(--blue), #ff69b4);
+        color: var(--white);
+        padding: 30px;
+        text-align: center;
+    }
+
+        .vacancy-form-header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .vacancy-form-header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+    .vacancy-form-content {
+        padding: 40px;
+    }
+
+    .vacancy-form-group {
+        margin-bottom: 28px;
+    }
+
+    .vacancy-form-label {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--black1);
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+        .vacancy-form-label .form-number {
+            display: inline-block;
+            background: var(--blue);
+            color: var(--white);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+
+    .vacancy-input,
+    .vacancy-textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        font-family: "Ubuntu", sans-serif;
+    }
+
+        .vacancy-input:focus,
+        .vacancy-textarea:focus {
+            outline: none;
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(242, 39, 113, 0.1);
+        }
+
+    .vacancy-textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    .vacancy-file-upload {
+        position: relative;
+        border: 2px dashed #e0e0e0;
+        border-radius: 8px;
+        padding: 30px;
+        text-align: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        background: var(--gray);
+    }
+
+        .vacancy-file-upload:hover {
+            border-color: var(--blue);
+            background: #fff5fb;
+        }
+
+        .vacancy-file-upload input[type="file"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+    .vacancy-file-icon {
+        font-size: 48px;
+        color: var(--blue);
+        margin-bottom: 12px;
+    }
+
+    .vacancy-file-text {
+        color: var(--black2);
+        font-size: 14px;
+    }
+
+    .vacancy-file-name {
+        margin-top: 12px;
+        color: var(--blue);
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .vacancy-button-group {
+        display: flex;
+        gap: 16px;
+        margin-top: 40px;
+    }
+
+    .vacancy-btn {
+        flex: 1;
+        padding: 14px 28px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .vacancy-btn-primary {
+        background: linear-gradient(135deg, var(--blue), #ff69b4);
+        color: var(--white);
+        box-shadow: 0 4px 12px rgba(242, 39, 113, 0.3);
+    }
+
+        .vacancy-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(242, 39, 113, 0.4);
+        }
+
+    .vacancy-btn-secondary {
+        background: var(--white);
+        color: var(--black2);
+        border: 2px solid #e0e0e0;
+    }
+
+        .vacancy-btn-secondary:hover {
+            background: var(--gray);
+            border-color: #ccc;
+        }
+
+    .vacancy-success-message {
+        display: none;
+        background: #4caf50;
+        color: var(--white);
+        padding: 16px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+        .vacancy-success-message.show {
+            display: block;
+        }
+
+    /* Responsive adjustments for vacancy form */
+
+
+    .vacancy-btn {
+        width: 100%;
+    }
+
+    }
+</style>
+<!-- ========================= Main ==================== -->
+<div class="main">
+    <div class="topbar">
+        <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+
+
+
+        <div class="user">
+            <img src="~/Admin/assets/imgs/customer01.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="vacancy-form-container">
+        <div class="vacancy-form-header">
+            <h1>Add New Vacancy</h1>
+            <p>Fill in the details below to post a new job opening</p>
+        </div>
+
+        <div class="vacancy-form-content">
+            <div class="vacancy-success-message" id="successMessage">
+                ✓ Vacancy added successfully!
+            </div>
+
+            <form  asp-action="AddVacancy" asp-controller="Admin" method="post" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
+                <div class="vacancy-form-group">
+                    <label class="vacancy-form-label">
+                        <span class="form-number">1</span>
+                        Job Title
+                    </label>
+                    <input type="text" asp-for="Title" class="vacancy-input" placeholder="e.g., Senior Software Engineer" required>
+                </div>
+
+                <div class="vacancy-form-group">
+                    <label class="vacancy-form-label">
+                        <span class="form-number">2</span>
+                        Job Description
+                    </label>
+                    <textarea asp-for="Description" class="vacancy-textarea" placeholder="Describe the role, responsibilities, and requirements..." required></textarea>
+                </div>
+
+                <div class="vacancy-form-group">
+                    <label class="vacancy-form-label">
+                        <span class="form-number">3</span>
+                        Department
+                    </label>
+                    <select asp-for="DepartmentId" class="vacancy-input" asp-items="ViewBag.Departments" required>
+                        <option value="">Select a department</option>
+                       
+                    </select>
+                </div>
+
+                <div class="vacancy-form-group">
+                    <label class="vacancy-form-label">
+                        <span class="form-number">4</span>
+                        Total Openings
+                    </label>
+                    <input type="number" asp-for="TotalOpenings" class="vacancy-input" min="1" placeholder="e.g., 5" required>
+                </div>
+
+                <div class="vacancy-form-group">
+                    <label class="vacancy-form-label">
+                        <span class="form-number">5</span>
+                        Close Date
+                    </label>
+                    <input type="date" asp-for="CloseDate" class="vacancy-input" required>
+                </div>
+
+                <div class="vacancy-form-group">
+                    <label class="vacancy-form-label">
+                        <span class="form-number">6</span>
+                        Vacancy Image
+                    </label>
+                    
+                        <input type="file" name="ImagePath" >
+                        
+                  
+                </div>
+
+                <div class="vacancy-button-group">
+                    <button type="reset" class="vacancy-btn vacancy-btn-secondary">Cancel</button>
+                    <input type="submit" class="vacancy-btn vacancy-btn-primary" value="Add Vacancy">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+</div>

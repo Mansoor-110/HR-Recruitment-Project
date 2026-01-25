@@ -35,15 +35,15 @@ public partial class RecruitmentSystemContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=LAB8-203;Database=RecruitmentSystem;;User Id=sa;Password=aptech;TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer("Server=MANSOOR;Database=RecruitmentSystem;User Id=sa;Password=aptech;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Applicant>(entity =>
         {
-            entity.HasKey(e => e.ApplicantId).HasName("PK__Applican__39AE91A8651CA644");
+            entity.HasKey(e => e.ApplicantId).HasName("PK__Applican__39AE91A8E6D5EA1B");
 
-            entity.HasIndex(e => e.UserId, "UQ__Applican__1788CC4DB5BA7BB8").IsUnique();
+            entity.HasIndex(e => e.UserId, "UQ__Applican__1788CC4DB8C18BFE").IsUnique();
 
             entity.Property(e => e.CreatedDate)
                 .HasDefaultValueSql("(getdate())")
@@ -62,7 +62,7 @@ public partial class RecruitmentSystemContext : DbContext
 
         modelBuilder.Entity<ApplicantVacancy>(entity =>
         {
-            entity.HasKey(e => e.ApplicantVacancyId).HasName("PK__Applican__364E1CB66E6EDACB");
+            entity.HasKey(e => e.ApplicantVacancyId).HasName("PK__Applican__364E1CB683FD5220");
 
             entity.HasIndex(e => new { e.ApplicantId, e.VacancyId }, "UQ_ApplicantVacancy").IsUnique();
 
@@ -86,20 +86,20 @@ public partial class RecruitmentSystemContext : DbContext
 
         modelBuilder.Entity<Department>(entity =>
         {
-            entity.HasKey(e => e.DepartmentId).HasName("PK__Departme__B2079BED7C520C49");
+            entity.HasKey(e => e.DepartmentId).HasName("PK__Departme__B2079BEDC2D7D8F0");
 
-            entity.HasIndex(e => e.DepartmentName, "UQ__Departme__D949CC3499D04071").IsUnique();
+            entity.HasIndex(e => e.DepartmentName, "UQ__Departme__D949CC34867DBDC7").IsUnique();
 
             entity.Property(e => e.DepartmentName).HasMaxLength(100);
         });
 
         modelBuilder.Entity<Employee>(entity =>
         {
-            entity.HasKey(e => e.EmployeeId).HasName("PK__Employee__7AD04F1189AAF9AF");
+            entity.HasKey(e => e.EmployeeId).HasName("PK__Employee__7AD04F11C94449B3");
 
-            entity.HasIndex(e => e.UserId, "UQ__Employee__1788CC4D40596B04").IsUnique();
+            entity.HasIndex(e => e.UserId, "UQ__Employee__1788CC4D9456B8AA").IsUnique();
 
-            entity.HasIndex(e => e.EmployeeCode, "UQ__Employee__1F642548CBE4DD0F").IsUnique();
+            entity.HasIndex(e => e.EmployeeCode, "UQ__Employee__1F6425483BC13252").IsUnique();
 
             entity.Property(e => e.EmployeeCode).HasMaxLength(50);
             entity.Property(e => e.FullName).HasMaxLength(150);
@@ -117,7 +117,7 @@ public partial class RecruitmentSystemContext : DbContext
 
         modelBuilder.Entity<Interview>(entity =>
         {
-            entity.HasKey(e => e.InterviewId).HasName("PK__Intervie__C97C5852BBF68045");
+            entity.HasKey(e => e.InterviewId).HasName("PK__Intervie__C97C585237B4E9C7");
 
             entity.Property(e => e.Result)
                 .HasMaxLength(30)
@@ -136,7 +136,7 @@ public partial class RecruitmentSystemContext : DbContext
 
         modelBuilder.Entity<Notification>(entity =>
         {
-            entity.HasKey(e => e.NotificationId).HasName("PK__Notifica__20CF2E1210E1CDCA");
+            entity.HasKey(e => e.NotificationId).HasName("PK__Notifica__20CF2E127EFE8138");
 
             entity.Property(e => e.CreatedDate)
                 .HasDefaultValueSql("(getdate())")
@@ -151,18 +151,18 @@ public partial class RecruitmentSystemContext : DbContext
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.RoleId).HasName("PK__Roles__8AFACE1A72183372");
+            entity.HasKey(e => e.RoleId).HasName("PK__Roles__8AFACE1AC4C1A37E");
 
-            entity.HasIndex(e => e.RoleName, "UQ__Roles__8A2B616090A06534").IsUnique();
+            entity.HasIndex(e => e.RoleName, "UQ__Roles__8A2B6160FD7406BF").IsUnique();
 
             entity.Property(e => e.RoleName).HasMaxLength(50);
         });
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CC4C4E863172");
+            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CC4CDA80FD45");
 
-            entity.HasIndex(e => e.Email, "UQ__Users__A9D10534F145FF14").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Users__A9D105340C08B810").IsUnique();
 
             entity.Property(e => e.CreatedDate)
                 .HasDefaultValueSql("(getdate())")
@@ -179,12 +179,15 @@ public partial class RecruitmentSystemContext : DbContext
 
         modelBuilder.Entity<Vacancy>(entity =>
         {
-            entity.HasKey(e => e.VacancyId).HasName("PK__Vacancie__6456763F67B5C048");
+            entity.HasKey(e => e.VacancyId).HasName("PK__Vacancie__6456763F7924A088");
 
             entity.Property(e => e.CloseDate).HasColumnType("datetime");
             entity.Property(e => e.CreatedDate)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
+            entity.Property(e => e.ImagePath)
+                .HasMaxLength(255)
+                .IsUnicode(false);
             entity.Property(e => e.Status)
                 .HasMaxLength(30)
                 .HasDefaultValue("Open");

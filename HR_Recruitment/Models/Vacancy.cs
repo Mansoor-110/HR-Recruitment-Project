@@ -25,6 +25,8 @@ public partial class Vacancy
 
     public int CreatedByEmployeeId { get; set; }
 
+    public string? ImagePath { get; set; }
+
     public virtual ICollection<ApplicantVacancy> ApplicantVacancies { get; set; } = new List<ApplicantVacancy>();
 
     public virtual Employee CreatedByEmployee { get; set; } = null!;

@@ -1,0 +1,132 @@
+﻿@model HR_Recruitment.Models.VacancyDepartmentVM;
+@functions {
+    public string TimeAgo(DateTime dateTime)
+{
+    var timeSpan = DateTime.Now - dateTime;
+
+    if (timeSpan.TotalMinutes < 1)
+        return "Just now";
+    if (timeSpan.TotalMinutes < 60)
+        return $"{(int)timeSpan.TotalMinutes} minutes ago";
+    if (timeSpan.TotalHours < 24)
+        return $"{(int)timeSpan.TotalHours} hours ago";
+    if (timeSpan.TotalDays < 7)
+        return $"{(int)timeSpan.TotalDays} days ago";
+
+    return dateTime.ToString("dd MMM yyyy");
+}
+    public string ClosingTime(DateTime? closeDate)
+    {
+        if (closeDate == null)
+            return "No closing date";
+
+        var now = DateTime.Now;
+        var diff = closeDate.Value - now;
+
+        if (diff.TotalSeconds > 0)
+        {
+            if (diff.TotalDays < 1)
+                return "Closes today";
+            if (diff.TotalDays < 7)
+                return $"Closes in {(int)diff.TotalDays} days";
+
+            return $"Closes on {closeDate.Value:dd MMM yyyy}";
+        }
+        else
+        {
+            diff = now - closeDate.Value;
+
+            if (diff.TotalDays < 1)
+                return "Closed today";
+            if (diff.TotalDays < 7)
+                return $"Closed {(int)diff.TotalDays} days ago";
+
+            return $"Closed on {closeDate.Value:dd MMM yyyy}";
+        }
+    }
+
+}
+<main>
+
+    <!-- Hero Area Start-->
+    <div class="slider-area ">
+        <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="assets/img/hero/about.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center">
+                            <h2>Vacancy Details</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Area End -->
+    <!-- job post company Start -->
+    <div class="job-post-company pt-120 pb-120">
+        <div class="container">
+            <div class="row justify-content-between">
+                <!-- Left Content -->
+                <div class="col-xl-7 col-lg-8">
+                    <!-- job single -->
+                    <div class="single-job-items mb-50">
+                        <div class="job-items">
+                            <div class="company-img company-img-details">
+                                <a href="#"><img src="~/images/vacancies/@Model.ImagePath" alt="" width="200"></a>
+                            </div>
+                            <div class="job-tittle">
+                                <a href="#">
+                                    <h4>@Model.Title</h4>
+                                </a>
+                                <ul>
+                                    <li>@Model.DepartmentName</li>
+                                    <li><i class="fas fa-user"></i>Openings: @(Model.TotalOpenings - Model.FilledOpenings)</li>
+                                    <li class="@(Model.Status == "Open" ? "text-success" : "text-danger")">
+
+                                        <i class="fas fa-info-circle"></i>@Model.Status
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- job single End -->
+
+                    <div class="job-post-details">
+                        <div class="post-details1 mb-50">
+                            <!-- Small Section Tittle -->
+                            <div class="small-section-tittle">
+                                <h4>Job Description</h4>
+                            </div>
+                            <p>@Model.Description</p>
+                        </div>
+                      
+                      
+                    </div>
+
+                </div>
+                <!-- Right Content -->
+                <div class="col-xl-4 col-lg-4">
+                    <div class="post-details3  mb-50">
+                        <!-- Small Section Tittle -->
+                        <div class="small-section-tittle">
+                            <h4>Job Overview</h4>
+                        </div>
+                        <ul>
+                            <li>Posted date : <span>@TimeAgo(Model.CreatedDate)</span></li>
+                            <li>Required Applicants: <span>@(Model.TotalOpenings - Model.FilledOpenings ) </span></li>
+                            <li>Job nature : <span>Full time</span></li>
+                            <li>Application : <span>@ClosingTime(Model.CloseDate)</span></li>
+                        </ul>
+                        <div class="apply-btn2">
+                            <a href="#" class="btn">Apply Now</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- job post company End -->
+
+</main>
