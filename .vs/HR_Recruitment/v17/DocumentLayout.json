@@ -3,32 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\dell 7310\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\dell 7310\\desktop\\hr-recruitment-project\\hr_recruitment\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\dell 7310\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\home\\findjob.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\home\\findjob.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\dell 7310\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\home\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\home\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\dell 7310\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\home\\jobdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\home\\jobdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\dell 7310\\desktop\\hr-recruitment-project\\hr_recruitment\\models\\myapplicationvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\models\\myapplicationvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\dell 7310\\desktop\\hr-recruitment-project\\hr_recruitment\\models\\vacancydepartmentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\models\\vacancydepartmentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\dell 7310\\desktop\\hr-recruitment-project\\hr_recruitment\\models\\vacancy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\models\\vacancy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\dell 7310\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\home\\findjob.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\home\\findjob.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\dell 7310\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\dell 7310\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\home\\jobdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\home\\jobdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\dell 7310\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\dell 7310\\desktop\\hr-recruitment-project\\hr_recruitment\\models\\vacancy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\models\\vacancy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\dell 7310\\desktop\\hr-recruitment-project\\hr_recruitment\\models\\recruitmentsystemcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -142,87 +150,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "JobDetails.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Home\\JobDetails.cshtml",
-              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Home\\JobDetails.cshtml",
-              "ToolTip": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Home\\JobDetails.cshtml",
-              "RelativeToolTip": "HR_Recruitment\\Views\\Home\\JobDetails.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAMwDoAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-21T11:39:31.667Z",
+              "DocumentIndex": 2,
+              "Title": "MyApplicationVM.cs",
+              "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\MyApplicationVM.cs",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Models\\MyApplicationVM.cs",
+              "ToolTip": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\MyApplicationVM.cs",
+              "RelativeToolTip": "HR_Recruitment\\Models\\MyApplicationVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T06:51:27.228Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Home\\Profile.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Home\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Home\\Profile.cshtml",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Home\\Profile.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T06:42:58.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAcwFkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T11:12:58.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Controllers\\HomeController.cs",
               "RelativeToolTip": "HR_Recruitment\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAADwvxEAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACEAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-21T11:11:52.119Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "FindJob.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Home\\FindJob.cshtml",
               "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Home\\FindJob.cshtml",
               "ToolTip": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Home\\FindJob.cshtml",
               "RelativeToolTip": "HR_Recruitment\\Views\\Home\\FindJob.cshtml",
-              "ViewState": "AgIAAOwAAAAAAAAAAAAcwPIAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-01-21T11:24:36.316Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RecruitmentSystemContext.cs",
-              "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\RecruitmentSystemContext.cs",
-              "RelativeDocumentMoniker": "HR_Recruitment\\Models\\RecruitmentSystemContext.cs",
-              "ToolTip": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\RecruitmentSystemContext.cs",
-              "RelativeToolTip": "HR_Recruitment\\Models\\RecruitmentSystemContext.cs",
-              "ViewState": "AgIAALQAAAAAAAAAAAAcwMsAAAA/AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "VacancyDepartmentVM.cs",
+              "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\VacancyDepartmentVM.cs",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Models\\VacancyDepartmentVM.cs",
+              "ToolTip": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\VacancyDepartmentVM.cs",
+              "RelativeToolTip": "HR_Recruitment\\Models\\VacancyDepartmentVM.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA7wAcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T15:23:26.509Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\Index.cshtml",
-              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Admin\\Index.cshtml",
-              "ToolTip": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\Index.cshtml",
-              "RelativeToolTip": "HR_Recruitment\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-22T14:29:50.556Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Vacancy.cs",
-              "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\Vacancy.cs",
-              "RelativeDocumentMoniker": "HR_Recruitment\\Models\\Vacancy.cs",
-              "ToolTip": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\Vacancy.cs",
-              "RelativeToolTip": "HR_Recruitment\\Models\\Vacancy.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAA9wCMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T17:44:52.403Z",
+              "WhenOpened": "2026-01-25T09:20:10.868Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Home\\Index.cshtml",
@@ -235,20 +245,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "VacancyDepartmentVM.cs",
-              "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\VacancyDepartmentVM.cs",
-              "RelativeDocumentMoniker": "HR_Recruitment\\Models\\VacancyDepartmentVM.cs",
-              "ToolTip": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\VacancyDepartmentVM.cs",
-              "RelativeToolTip": "HR_Recruitment\\Models\\VacancyDepartmentVM.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAcwAcAAAAwAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "Vacancy.cs",
+              "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\Vacancy.cs",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Models\\Vacancy.cs",
+              "ToolTip": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\Vacancy.cs",
+              "RelativeToolTip": "HR_Recruitment\\Models\\Vacancy.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAA9wCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-25T09:20:10.868Z",
+              "WhenOpened": "2026-01-24T17:44:52.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-22T14:29:50.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RecruitmentSystemContext.cs",
+              "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\RecruitmentSystemContext.cs",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Models\\RecruitmentSystemContext.cs",
+              "ToolTip": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\RecruitmentSystemContext.cs",
+              "RelativeToolTip": "HR_Recruitment\\Models\\RecruitmentSystemContext.cs",
+              "ViewState": "AgIAALQAAAAAAAAAAAAcwMsAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T15:23:26.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "JobDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Home\\JobDetails.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Home\\JobDetails.cshtml",
+              "ToolTip": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Home\\JobDetails.cshtml",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Home\\JobDetails.cshtml",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAiwHwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T11:39:31.667Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "AddVacancy.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\AddVacancy.cshtml",
               "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Admin\\AddVacancy.cshtml",
@@ -260,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Department.cs",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\Department.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\Department.cs",
@@ -272,19 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "HR_Recruitment\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAqwEkAAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-21T11:12:58.917Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Controllers\\AuthController.cs",
@@ -296,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\Employee.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\Employee.cs",
@@ -308,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Controllers\\AdminController.cs",
@@ -320,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\wwwroot\\Admin\\assets\\css\\style.css",
               "RelativeDocumentMoniker": "HR_Recruitment\\wwwroot\\Admin\\assets\\css\\style.css",
@@ -332,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "_AdminLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Shared\\_AdminLayout.cshtml",
@@ -344,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\appsettings.json",
               "RelativeDocumentMoniker": "HR_Recruitment\\appsettings.json",
@@ -356,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Program.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Program.cs",
@@ -368,7 +402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\User.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\User.cs",
@@ -380,7 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Auth\\Login.cshtml",
               "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Auth\\Login.cshtml",
@@ -392,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Auth\\Register.cshtml",
               "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Auth\\Register.cshtml",
@@ -404,7 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Notification.cs",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\Notification.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\Notification.cs",
@@ -416,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "RegisterViewModel.cs",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\RegisterViewModel.cs",
@@ -428,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\Role.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\Role.cs",
@@ -440,7 +474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "Applicant.cs",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\Applicant.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\Applicant.cs",
@@ -452,7 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "Interview.cs",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\Interview.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\Interview.cs",
@@ -464,7 +498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "custom.css",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\wwwroot\\css\\custom.css",
               "RelativeDocumentMoniker": "HR_Recruitment\\wwwroot\\css\\custom.css",
@@ -476,7 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\ErrorViewModel.cs",
@@ -488,7 +522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "HR_Recruitment\\wwwroot\\css\\site.css",
@@ -500,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "Contact.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Home\\Contact.cshtml",
               "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Home\\Contact.cshtml",
@@ -512,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "Blog_Details.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Home\\Blog_Details.cshtml",
               "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Home\\Blog_Details.cshtml",
@@ -524,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "Blog.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Home\\Blog.cshtml",
               "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Home\\Blog.cshtml",
@@ -536,7 +570,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "About.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Home\\About.cshtml",
               "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Home\\About.cshtml",
