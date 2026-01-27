@@ -1,0 +1,319 @@
+@model ScheduleInterviewVM
+@{
+    Layout = null;
+    ViewData["Title"] = "Schedule Interview";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #F2F2F2;
+        }
+
+        .my-apps-container {
+            margin-left: 285px;
+            padding: 30px;
+            background-color: #F2F2F2;
+            min-height: 100vh;
+        }
+
+        .my-apps-page-header {
+            margin-bottom: 30px;
+        }
+
+        .my-apps-page-header h2 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #333;
+            margin: 0 0 8px 0;
+        }
+
+        .my-apps-page-header p {
+            font-size: 16px;
+            color: #666;
+            margin: 0;
+        }
+
+        .my-apps-table-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            max-width: 650px;
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+            letter-spacing: 0.3px;
+        }
+
+        .form-label-required::after {
+            content: " *";
+            color: #F22771;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid #E5E5E5;
+            border-radius: 10px;
+            font-size: 15px;
+            color: #333;
+            background-color: #FAFAFA;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #F22771;
+            background-color: white;
+            box-shadow: 0 0 0 4px rgba(242, 39, 113, 0.1);
+        }
+
+        .form-control:hover:not(:focus) {
+            border-color: #F22771;
+            background-color: #FFF;
+        }
+
+        select.form-control {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 16px;
+            padding-right: 45px;
+        }
+
+        select.form-control option {
+            padding: 10px;
+        }
+
+        input[type="date"].form-control,
+        input[type="time"].form-control {
+            cursor: pointer;
+        }
+
+        input[type="date"].form-control::-webkit-calendar-picker-indicator,
+        input[type="time"].form-control::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            color: #F22771;
+            font-size: 18px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 2px solid #F2F2F2;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .btn-primary {
+            background-color: #F22771;
+            color: white;
+            box-shadow: 0 3px 8px rgba(242, 39, 113, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #D91F5E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(242, 39, 113, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: #6C757D;
+            color: white;
+            box-shadow: 0 3px 8px rgba(108, 117, 125, 0.25);
+        }
+
+        .btn-secondary:hover {
+            background-color: #5A6268;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(108, 117, 125, 0.35);
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .info-box {
+            background-color: #FFF5F9;
+            border-left: 4px solid #F22771;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .info-box p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .info-box-icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #F22771;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+
+        /* Loading state */
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* Validation styles */
+        .form-control:invalid:not(:placeholder-shown) {
+            border-color: #DC3545;
+        }
+
+        .form-control:valid:not(:placeholder-shown) {
+            border-color: #28A745;
+        }
+    </style>
+</head>
+<body>
+    <div class="my-apps-container">
+        <div class="my-apps-page-header">
+            <h2>Schedule Interview</h2>
+            <p>Select interviewer and interview time slot</p>
+        </div>
+
+        <div class="my-apps-table-container">
+            <div class="info-box">
+                <p>
+                    <span class="info-box-icon">i</span>
+                    <strong>Note:</strong> Please ensure the selected time slot doesn't conflict with other scheduled interviews.
+                </p>
+            </div>
+
+            <form asp-action="ScheduleInterview" method="post">
+                <!-- Hidden ApplicantVacancyId -->
+                <input type="hidden" asp-for="ApplicantVacancyId" />
+
+                <!-- Interviewer -->
+                <div class="form-group">
+                    <label class="form-label form-label-required">Select Interviewer</label>
+                    <select asp-for="InterviewerEmployeeId" class="form-control" required>
+                        <option value="">-- Choose an Interviewer --</option>
+                        @foreach (var i in ViewBag.Interviewers)
+                        {
+                            <option value="@i.EmployeeId">
+                                @i.FullName
+                            </option>
+                        }
+                    </select>
+                </div>
+
+                <!-- Interview Date -->
+                <div class="form-group">
+                    <label class="form-label form-label-required">Interview Date</label>
+                    <input asp-for="InterviewDate"
+                           type="date"
+                           class="form-control"
+                           min="@DateTime.Now.ToString("yyyy-MM-dd")"
+                           required />
+                </div>
+
+                <!-- Start Time & End Time -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label form-label-required">Start Time</label>
+                        <input asp-for="StartTime"
+                               type="time"
+                               class="form-control"
+                               required />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label form-label-required">End Time</label>
+                        <input asp-for="EndTime"
+                               type="time"
+                               class="form-control"
+                               required />
+                    </div>
+                </div>
+
+                <!-- Submit Buttons -->
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">
+                        📅 Schedule Interview
+                    </button>
+                    <a asp-action="Applications" class="btn btn-secondary">
+                        ✕ Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Validate end time is after start time
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const startTime = document.querySelector('input[name="StartTime"]').value;
+            const endTime = document.querySelector('input[name="EndTime"]').value;
+            
+            if (startTime && endTime && endTime <= startTime) {
+                e.preventDefault();
+                alert('End time must be after start time!');
+            }
+        });
+    </script>
+</body>
+</html>

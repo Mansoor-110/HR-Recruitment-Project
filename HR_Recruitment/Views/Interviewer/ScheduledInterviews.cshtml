@@ -1,0 +1,336 @@
+@model List<HR_Recruitment.Models.InterviewVM>
+@{
+    Layout = "~/views/Shared/_InterviewerLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduled Interviews</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #F2F2F2;
+        }
+
+        .my-apps-container {
+            margin-left: 300px;
+            padding: 30px;
+            background-color: #F2F2F2;
+            min-height: 100vh;
+        }
+
+        .my-apps-page-header {
+            margin-bottom: 30px;
+        }
+
+        .my-apps-page-header h2 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #333;
+            margin: 0 0 8px 0;
+        }
+
+        .my-apps-page-header p {
+            font-size: 16px;
+            color: #666;
+            margin: 0;
+        }
+
+        .my-apps-table-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .my-apps-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        .my-apps-table thead {
+            background-color: #F2F2F2;
+        }
+
+        .my-apps-table thead th {
+            padding: 16px 25px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .my-apps-table tbody tr {
+            border-bottom: 1px solid #F2F2F2;
+            transition: background-color 0.2s ease;
+        }
+
+        .my-apps-table tbody tr:hover {
+            background-color: #FFF5F9;
+        }
+
+        .my-apps-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .my-apps-table tbody td {
+            padding: 18px 25px;
+            font-size: 15px;
+            color: #333;
+            vertical-align: middle;
+        }
+
+        .my-apps-job-title {
+            font-weight: 500;
+            color: #222;
+        }
+
+        .my-apps-status-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            text-align: center;
+            min-width: 90px;
+        }
+
+        /* Status colors */
+        .my-apps-table tbody tr:has(.my-apps-status-badge:contains("Pending")) .my-apps-status-badge,
+        .status-pending {
+            background-color: #FFF3CD;
+            color: #856404;
+        }
+
+        .my-apps-table tbody tr:has(.my-apps-status-badge:contains("Approved")) .my-apps-status-badge,
+        .status-approved {
+            background-color: #D4EDDA;
+            color: #155724;
+        }
+
+        .my-apps-table tbody tr:has(.my-apps-status-badge:contains("Rejected")) .my-apps-status-badge,
+        .status-rejected {
+            background-color: #F8D7DA;
+            color: #721C24;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin: 0 4px;
+        }
+
+        .btn-sm {
+            padding: 8px 16px;
+            font-size: 13px;
+        }
+
+        .btn-success {
+            background-color: #28A745;
+            color: white;
+            box-shadow: 0 2px 6px rgba(40, 167, 69, 0.2);
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn-danger {
+            background-color: #DC3545;
+            color: white;
+            box-shadow: 0 2px 6px rgba(220, 53, 69, 0.2);
+        }
+
+        .btn-danger:hover {
+            background-color: #C82333;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .me-1 {
+            margin-right: 4px;
+        }
+
+        /* Date and Time styling */
+        .my-apps-table tbody td:nth-child(3),
+        .my-apps-table tbody td:nth-child(4) {
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* Empty state */
+        .text-center {
+            text-align: center;
+        }
+
+        .text-muted {
+            color: #999;
+        }
+
+        .py-4 {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .empty-state-cell {
+            text-align: center;
+            padding: 60px 20px !important;
+            color: #999;
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            color: #DDD;
+            margin-bottom: 15px;
+        }
+
+        .empty-state-text {
+            font-size: 16px;
+            color: #999;
+        }
+
+        /* Action column */
+        .my-apps-table tbody td:last-child {
+            white-space: nowrap;
+        }
+
+        /* Completed badge */
+        .completed-badge {
+            background-color: #E8F4FD;
+            color: #0C5460;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="my-apps-container">
+        <div class="my-apps-page-header">
+            <h2>Scheduled Interviews</h2>
+            <p>Interviews assigned to you</p>
+        </div>
+
+        <div class="my-apps-table-container">
+            @if (Model != null && Model.Any())
+            {
+                <table class="my-apps-table">
+                    <thead>
+                        <tr>
+                            <th>Applicant</th>
+                            <th>Job Position</th>
+                            <th>Interview Date</th>
+                            <th>Time Slot</th>
+                            <th>Result</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="my-apps-job-title" data-label="Applicant">
+                                    @item.ApplicantName
+                                </td>
+                                <td data-label="Job Position">
+                                    @item.JobTitle
+                                </td>
+                                <td data-label="Interview Date">
+                                    @item.InterviewDate.ToString("dd MMM yyyy")
+                                </td>
+                                <td data-label="Time Slot">
+                                    @item.StartTime.ToString("HH:mm") - @item.EndTime.ToString("HH:mm")
+                                </td>
+                                <td data-label="Result">
+                                    @{
+                                        var statusClass = "my-apps-status-badge";
+                                        var resultLower = item.Result?.ToLower() ?? "pending";
+
+                                        if (resultLower.Contains("approve"))
+                                        {
+                                            statusClass += " status-approved";
+                                        }
+                                        else if (resultLower.Contains("reject"))
+                                        {
+                                            statusClass += " status-rejected";
+                                        }
+                                        else
+                                        {
+                                            statusClass += " status-pending";
+                                        }
+                                    }
+                                    <span class="@statusClass">
+                                        @item.Result
+                                    </span>
+                                </td>
+                                <td data-label="Action">
+                                    @if (item.Result == "Pending")
+                                    {
+                                        <a asp-action="Approve" asp-controller="Interviewer"
+                                           asp-route-id="@item.InterviewId"
+                                           class="btn btn-sm btn-success me-1"
+                                           onclick="return confirm('Are you sure you want to approve this candidate?');">
+                                            ✓ Approve
+                                        </a>
+                                        <a asp-action="Reject" asp-controller="Interviewer"
+                                           asp-route-id="@item.InterviewId"
+                                           class="btn btn-sm btn-danger"
+                                           onclick="return confirm('Are you sure you want to reject this candidate?');">
+                                            ✕ Reject
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <span class="completed-badge">Completed</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <div class="empty-state-cell">
+                    <div class="empty-state-icon">📅</div>
+                    <div class="empty-state-text">No scheduled interviews assigned to you.</div>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>

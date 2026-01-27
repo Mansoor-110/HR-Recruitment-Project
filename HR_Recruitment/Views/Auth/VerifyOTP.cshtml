@@ -1,0 +1,91 @@
+﻿@using HR_Recruitment.Models.ViewModels
+@model VerifyOtpViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP - Job Finder</title>
+    <link rel="stylesheet" href="~/CSS/custom.css">
+</head>
+<body>
+
+    <div class="login-container">
+
+        <!-- LEFT SIDE -->
+        <div class="login-brand">
+            <div class="brand-logo">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="8" r="4" fill="#4a5c8f" />
+                    <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"
+                          stroke="#4a5c8f" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+
+            <h1 class="brand-title">Job Finder</h1>
+            <p class="brand-tagline">Email Verification</p>
+
+            <div class="brand-features">
+                <div class="feature-item"><span>Secure account verification</span></div>
+                <div class="feature-item"><span>OTP valid for limited time</span></div>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE FORM -->
+        <div class="login-form-section">
+            <div class="form-header">
+                <h2>Verify Your Email</h2>
+                <p>Enter the OTP sent to your email</p>
+            </div>
+
+            @* 🔐 SAFETY CHECK *@
+            @if (Model == null)
+            {
+                <p style="color:red">Invalid verification request.</p>
+            }
+            else
+            {
+                <form asp-action="VerifyOtp" asp-controller="Auth" method="post">
+
+                    <!-- REQUIRED hidden fields -->
+                    <input type="hidden" asp-for="UserId" />
+                    <input type="hidden" asp-for="Email" />
+
+                    <div class="form-group">
+                        <label>OTP Code</label>
+                        <input type="text"
+                               asp-for="OtpCode"
+                               placeholder="Enter 6 digit OTP"
+                               required />
+                    </div>
+
+                    @if (ViewData["OtpError"] != null)
+                    {
+                        <p style="color:red">@ViewData["OtpError"]</p>
+                    }
+
+                    <button type="submit" class="login-btn">
+                        Verify OTP
+                    </button>
+                </form>
+
+                <div class="signup-link">
+                    Didn’t receive OTP?
+                    @if (!string.IsNullOrEmpty(Model.Email))
+                    {
+                        <a asp-action="ResendOtp" asp-route-email="@Model.Email">
+                            Resend OTP
+                        </a>
+                    }
+                </div>
+            }
+        </div>
+
+    </div>
+
+</body>
+</html>

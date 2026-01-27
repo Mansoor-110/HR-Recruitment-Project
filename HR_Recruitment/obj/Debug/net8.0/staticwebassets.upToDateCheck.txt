@@ -198,8 +198,12 @@ wwwroot\assets\scss\_support-company.scss
 wwwroot\assets\scss\_team.scss
 wwwroot\assets\scss\_testimonial.scss
 wwwroot\assets\scss\_variables.scss
+wwwroot\css\custom.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\vacancies\calculator-6147116_1280.png
+wwwroot\images\vacancies\social-4126418_1920.jpg
+wwwroot\images\vacancies\web developer.webp
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -258,7 +262,3 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\images\vacancies\web developer.webp
-wwwroot\css\custom.css
-wwwroot\images\vacancies\social-4126418_1920.jpg
-wwwroot\images\vacancies\calculator-6147116_1280.png

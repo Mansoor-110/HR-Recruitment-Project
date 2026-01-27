@@ -30,12 +30,9 @@ public partial class RecruitmentSystemContext : DbContext
     public virtual DbSet<Role> Roles { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
+    public virtual DbSet<EmailVerificationOTP> EmailVerificationOTPs { get; set; }
 
     public virtual DbSet<Vacancy> Vacancies { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=MANSOOR;Database=RecruitmentSystem;User Id=sa;Password=aptech;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -176,6 +173,29 @@ public partial class RecruitmentSystemContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Users_Roles");
         });
+
+        modelBuilder.Entity<EmailVerificationOTP>(entity =>
+        {
+            entity.HasKey(e => e.OTPId);
+
+            entity.Property(e => e.OTPCode)
+                .HasMaxLength(10)
+                .IsRequired();
+
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())");
+
+            entity.Property(e => e.ExpiryDate)
+                .HasColumnType("datetime");
+
+            entity.HasOne(e => e.User)
+                .WithMany()
+                .HasForeignKey(e => e.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+        });
+
+
+
 
         modelBuilder.Entity<Vacancy>(entity =>
         {

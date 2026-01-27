@@ -67,5 +67,84 @@ namespace Admin.Controllers
             return View(model);
         }
 
+        public IActionResult Applications()
+        {
+            var data = (from av in _context.ApplicantVacancies
+                        join a in _context.Applicants on av.ApplicantId equals a.ApplicantId
+                        join v in _context.Vacancies on av.VacancyId equals v.VacancyId
+                        select new HRApplicationVM
+                        {
+                            ApplicantVacancyId = av.ApplicantVacancyId,
+                            ApplicantName = a.FullName,
+                            JobTitle = v.Title,
+                            AppliedDate = av.AppliedDate,
+                            Status = av.Status
+                        }).ToList();
+
+            return View(data);
+        }
+
+
+        public IActionResult ScheduleInterview(int id)
+        {
+            ViewBag.Interviewers = _context.Employees
+                .Where(e => e.User.RoleId == 3) // Interviewer
+                .ToList();
+
+            return View(new ScheduleInterviewVM { ApplicantVacancyId = id });
+        }
+
+        [HttpPost]
+        public IActionResult ScheduleInterview(ScheduleInterviewVM vm)
+        {
+            var interview = new Interview
+            {
+                ApplicantVacancyId = vm.ApplicantVacancyId,
+                InterviewerEmployeeId = vm.InterviewerEmployeeId,
+                InterviewDate = vm.InterviewDate,
+                StartTime = vm.StartTime,
+                EndTime = vm.EndTime,
+                Result = "Pending"
+            };
+
+            _context.Interviews.Add(interview);
+            _context.SaveChanges();
+
+            return RedirectToAction("Applications"); // HR back to list
+        }
+
+
+        public IActionResult FinalDecision()
+        {
+            var data = _context.ApplicantVacancies
+                .Where(x => x.Status == "InterviewApproved"
+                         || x.Status == "InterviewRejected")
+                .ToList();
+
+            return View(data);
+        }
+
+        public IActionResult FinalApprove(int id)
+        {
+            UpdateFinal(id, "HRApproved");
+            return RedirectToAction("FinalDecision");
+        }
+
+        public IActionResult FinalReject(int id)
+        {
+            UpdateFinal(id, "HRRejected");
+            return RedirectToAction("FinalDecision");
+        }
+
+        private void UpdateFinal(int id, string status)
+        {
+            var app = _context.ApplicantVacancies.Find(id);
+            app.Status = status;
+            _context.SaveChanges();
+        }
+
+
+
+
     }
 }

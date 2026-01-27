@@ -1,0 +1,76 @@
+@model List<HR_Recruitment.Models.InterviewVM>
+
+    @{
+        Layout = null;
+    }
+
+<div class="my-apps-container">
+    <div class="my-apps-page-header">
+        <h2>Scheduled Interviews</h2>
+        <p>Interviews assigned to you</p>
+    </div>
+
+    <div class="my-apps-table-container">
+        <table class="my-apps-table">
+            <thead>
+                <tr>
+                    <th>Applicant</th>
+                    <th>Job</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Result</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="my-apps-job-title">@item.ApplicantName</td>
+                            <td>@item.JobTitle</td>
+                            <td>@item.InterviewDate.ToString("dd MMM yyyy")</td>
+                            <td>@item.StartTime.ToString("HH:mm") - @item.EndTime.ToString("HH:mm")</td>
+
+                            <td>
+                                <span class="my-apps-status-badge">
+                                    @item.Result
+                                </span>
+                            </td>
+
+                            <td>
+                                @if (item.Result == "Pending")
+                                {
+                                    <a asp-action="Approve" asp-controller="Interviewer"
+                                       asp-route-id="@item.InterviewId"
+                                       class="btn btn-sm btn-success me-1">
+                                        Approve
+                                    </a>
+
+                                    <a asp-action="Reject" asp-controller="Interviewer"
+                                       asp-route-id="@item.InterviewId"
+                                       class="btn btn-sm btn-danger">
+                                        Reject
+                                    </a>
+                                }
+                                else
+                                {
+                                    <span class="text-muted">—</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="6" class="text-center py-4 text-muted">
+                            No scheduled interviews assigned to you.
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
