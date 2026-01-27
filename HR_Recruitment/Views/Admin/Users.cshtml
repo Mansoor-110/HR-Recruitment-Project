@@ -1,0 +1,255 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model List<HR_Recruitment.Models.Applicant>
+
+<style>
+    .applications-container {
+        padding: 30px;
+        margin-left: 300px;
+        background-color: #F2F2F2;
+        min-height: 100vh;
+    }
+
+    .page-header {
+        margin-bottom: 30px;
+    }
+
+        .page-header h1 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+        }
+
+    .table-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+    }
+
+    .table-header {
+        padding: 20px 25px;
+        border-bottom: 2px solid #F2F2F2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .table-header h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+        }
+
+    .my-apps-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+    }
+
+        .my-apps-table thead {
+            background-color: #F2F2F2;
+        }
+
+            .my-apps-table thead th {
+                padding: 16px 25px;
+                text-align: left;
+                font-weight: 600;
+                font-size: 14px;
+                color: #666;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+        .my-apps-table tbody tr {
+            border-bottom: 1px solid #F2F2F2;
+            transition: background-color 0.2s ease;
+        }
+
+            .my-apps-table tbody tr:hover {
+                background-color: #FFF5F9;
+            }
+
+            .my-apps-table tbody tr:last-child {
+                border-bottom: none;
+            }
+
+        .my-apps-table tbody td {
+            padding: 18px 25px;
+            font-size: 15px;
+            color: #333;
+        }
+
+    .applicant-cell {
+        font-weight: 500;
+        color: #222;
+    }
+
+    .userid-cell {
+        color: #666;
+        font-family: 'Courier New', monospace;
+    }
+
+    .phone-cell {
+        color: #666;
+    }
+
+    .date-cell {
+        color: #888;
+        font-size: 14px;
+    }
+
+    .status-badge {
+        display: inline-block;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 500;
+        text-align: center;
+        min-width: 90px;
+    }
+
+    .status-nothprocess {
+        background-color: #FFF3CD;
+        color: #856404;
+    }
+
+    .status-active {
+        background-color: #D4EDDA;
+        color: #155724;
+    }
+
+    .status-inactive {
+        background-color: #F8D7DA;
+        color: #721C24;
+    }
+
+    .status-pending {
+        background-color: #D1ECF1;
+        color: #0C5460;
+    }
+
+    .btn-view {
+        background-color: #F22771;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 6px rgba(242, 39, 113, 0.2);
+    }
+
+        .btn-view:hover {
+            background-color: #D91F5E;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(242, 39, 113, 0.3);
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn-view:active {
+            transform: translateY(0);
+        }
+
+    .empty-state {
+        text-align: center;
+        padding: 60px 20px;
+        color: #999;
+    }
+
+        .empty-state i {
+            font-size: 64px;
+            color: #DDD;
+            margin-bottom: 20px;
+        }
+
+        .empty-state p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+   
+</style>
+
+<div class="applications-container">
+    <div class="page-header">
+        <h1>Applicants</h1>
+    </div>
+
+    <div class="table-card">
+        <div class="table-header">
+            <h2>All Registered Applicants</h2>
+        </div>
+
+        @if (Model != null && Model.Any())
+        {
+            <table class="my-apps-table">
+                <thead>
+                    <tr>
+                        <th>Applicant ID</th>
+                        <th>Full Name</th>
+                        <th>User ID</th>
+                        <th>Status</th>
+                        <th>Created Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="userid-cell" data-label="Applicant ID">@item.ApplicantId</td>
+                            <td class="applicant-cell" data-label="Full Name">@item.FullName</td>
+                            <td class="userid-cell" data-label="User ID">@item.UserId</td>
+                            
+                            <td data-label="Status">
+                                @{
+                                    var statusClass = "status-pending";
+                                    switch (item.Status?.ToLower())
+                                    {
+                                        case "active":
+                                            statusClass = "status-active";
+                                            break;
+                                        case "inactive":
+                                            statusClass = "status-inactive";
+                                            break;
+                                        case "nothprocess":
+                                            statusClass = "status-nothprocess";
+                                            break;
+                                        default:
+                                            statusClass = "status-pending";
+                                            break;
+                                    }
+                                }
+                                <span class="status-badge @statusClass">@item.Status</span>
+                            </td>
+                            <td class="date-cell" data-label="Created Date">@item.CreatedDate.ToString("MM/dd/yyyy")</td>
+                            <td data-label="Action">
+                                <a asp-action="Details"
+                                   asp-route-id="@item.ApplicantId"
+                                   class="btn-view">
+                                    View Details
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div class="empty-state">
+                <i class="fas fa-inbox"></i>
+                <p>No applicants found</p>
+            </div>
+        }
+    </div>
+</div>

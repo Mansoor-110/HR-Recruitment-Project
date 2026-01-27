@@ -1,8 +1,7 @@
-﻿
+﻿@model HrDashboardVM
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
 
 <!-- ========================= Main ==================== -->
 <div class="main">
@@ -27,203 +26,244 @@
     <div class="cardBox">
         <div class="card">
             <div>
-                <div class="numbers">1,504</div>
-                <div class="cardName">Daily Views</div>
+                <div class="numbers">@Model.TotalVacancies</div>
+                <div class="cardName">Total Vacancies</div>
             </div>
 
             <div class="iconBx">
-                <ion-icon name="eye-outline"></ion-icon>
+                <ion-icon name="briefcase-outline"></ion-icon>
             </div>
         </div>
 
         <div class="card">
             <div>
-                <div class="numbers">80</div>
-                <div class="cardName">Sales</div>
+                <div class="numbers">@Model.OpenVacancies</div>
+                <div class="cardName">Open Vacancies</div>
             </div>
 
             <div class="iconBx">
-                <ion-icon name="cart-outline"></ion-icon>
+                <ion-icon name="folder-open-outline"></ion-icon>
             </div>
         </div>
 
         <div class="card">
             <div>
-                <div class="numbers">284</div>
-                <div class="cardName">Comments</div>
+                <div class="numbers">@Model.TotalApplicants</div>
+                <div class="cardName">Total Applicants</div>
             </div>
 
             <div class="iconBx">
-                <ion-icon name="chatbubbles-outline"></ion-icon>
+                <ion-icon name="people-outline"></ion-icon>
             </div>
         </div>
 
         <div class="card">
             <div>
-                <div class="numbers">$7,842</div>
-                <div class="cardName">Earning</div>
+                <div class="numbers">@Model.TotalApplications</div>
+                <div class="cardName">Total Applications</div>
             </div>
 
             <div class="iconBx">
-                <ion-icon name="cash-outline"></ion-icon>
+                <ion-icon name="document-text-outline"></ion-icon>
             </div>
         </div>
     </div>
 
-    <!-- ================ Order Details List ================= -->
+    <!-- ======================= Application Stats Cards ================== -->
+    <div class="cardBox">
+        <div class="card">
+            <div>
+                <div class="numbers">@Model.PendingApplications</div>
+                <div class="cardName">Pending</div>
+            </div>
+
+            <div class="iconBx">
+                <ion-icon name="time-outline"></ion-icon>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="numbers">@Model.ShortlistedApplications</div>
+                <div class="cardName">Selcted Applicants</div>
+            </div>
+
+            <div class="iconBx">
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="numbers">@Model.RejectedApplications</div>
+                <div class="cardName">Rejected</div>
+            </div>
+
+            <div class="iconBx">
+                <ion-icon name="close-circle-outline"></ion-icon>
+            </div>
+        </div>
+
+
+
+            <div class="iconBx">
+                <ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================ Recent Applications List ================= -->
     <div class="details">
         <div class="recentOrders">
             <div class="cardHeader">
-                <h2>Recent Orders</h2>
+                <h2>Recent Applications</h2>
                 <a href="#" class="btn">View All</a>
             </div>
 
             <table>
                 <thead>
                     <tr>
-                        <td>Name</td>
-                        <td>Price</td>
-                        <td>Payment</td>
+                        <td>Applicant Name</td>
+                        <td>Job Title</td>
+                        <td>Department</td>
+                        <td>Applied Date</td>
                         <td>Status</td>
                     </tr>
                 </thead>
 
                 <tbody>
-                    <tr>
-                        <td>Star Refrigerator</td>
-                        <td>$1200</td>
-                        <td>Paid</td>
-                        <td><span class="status delivered">Delivered</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Dell Laptop</td>
-                        <td>$110</td>
-                        <td>Due</td>
-                        <td><span class="status pending">Pending</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Apple Watch</td>
-                        <td>$1200</td>
-                        <td>Paid</td>
-                        <td><span class="status return">Return</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Addidas Shoes</td>
-                        <td>$620</td>
-                        <td>Due</td>
-                        <td><span class="status inProgress">In Progress</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Star Refrigerator</td>
-                        <td>$1200</td>
-                        <td>Paid</td>
-                        <td><span class="status delivered">Delivered</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Dell Laptop</td>
-                        <td>$110</td>
-                        <td>Due</td>
-                        <td><span class="status pending">Pending</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Apple Watch</td>
-                        <td>$1200</td>
-                        <td>Paid</td>
-                        <td><span class="status return">Return</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Addidas Shoes</td>
-                        <td>$620</td>
-                        <td>Due</td>
-                        <td><span class="status inProgress">In Progress</span></td>
-                    </tr>
+                    @if (Model.RecentApplications != null && Model.RecentApplications.Any())
+                    {
+                        @foreach (var application in Model.RecentApplications)
+                        {
+                            <tr>
+                                <td>@application.ApplicantName</td>
+                                <td>@application.JobTitle</td>
+                                <td>@application.DepartmentName</td>
+                                <td>@application.AppliedDate.ToString("MMM dd, yyyy")</td>
+                                <td>
+                                    @if (application.ApplicationStatus == "Pending")
+                                    {
+                                        <span class="status pending">@application.ApplicationStatus</span>
+                                    }
+                                    else if (application.ApplicationStatus == "Shortlisted")
+                                    {
+                                        <span class="status delivered">@application.ApplicationStatus</span>
+                                    }
+                                    else if (application.ApplicationStatus == "Rejected")
+                                    {
+                                        <span class="status return">@application.ApplicationStatus</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="status inProgress">@application.ApplicationStatus</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" style="text-align: center;">No recent applications</td>
+                        </tr>
+                    }
                 </tbody>
             </table>
         </div>
 
-        <!-- ================= New Customers ================ -->
+        <!-- ================= Quick Actions ================ -->
         <div class="recentCustomers">
             <div class="cardHeader">
-                <h2>Recent Customers</h2>
+                <h2>Quick Actions</h2>
             </div>
 
             <table>
                 <tr>
                     <td width="60px">
-                        <div class="imgBx"><img src="~/Admin/assets/imgs/customer02.jpg" alt=""></div>
+                        <div class="imgBx">
+                            <ion-icon name="add-circle-outline" style="font-size: 40px; color: var(--blue);"></ion-icon>
+                        </div>
                     </td>
                     <td>
-                        <h4>David <br> <span>Italy</span></h4>
+                        <h4>Post New Vacancy <br> <span>Create job posting</span></h4>
                     </td>
                 </tr>
 
                 <tr>
                     <td width="60px">
-                        <div class="imgBx"><img src="~/Admin/assets/imgs/customer01.jpg" alt=""></div>
+                        <div class="imgBx">
+                            <ion-icon name="people-outline" style="font-size: 40px; color: var(--blue);"></ion-icon>
+                        </div>
                     </td>
                     <td>
-                        <h4>Amit <br> <span>India</span></h4>
+                        <h4>View Applicants <br> <span>Manage candidates</span></h4>
                     </td>
                 </tr>
 
                 <tr>
                     <td width="60px">
-                        <div class="imgBx"><img src="~/Admin/assets/imgs/customer02.jpg" alt=""></div>
+                        <div class="imgBx">
+                            <ion-icon name="document-text-outline" style="font-size: 40px; color: var(--blue);"></ion-icon>
+                        </div>
                     </td>
                     <td>
-                        <h4>David <br> <span>Italy</span></h4>
+                        <h4>Review Applications <br> <span>Process submissions</span></h4>
                     </td>
                 </tr>
 
                 <tr>
                     <td width="60px">
-                        <div class="imgBx"><img src="~/Admin/assets/imgs/customer01.jpg" alt=""></div>
+                        <div class="imgBx">
+                            <ion-icon name="briefcase-outline" style="font-size: 40px; color: var(--blue);"></ion-icon>
+                        </div>
                     </td>
                     <td>
-                        <h4>Amit <br> <span>India</span></h4>
+                        <h4>Manage Vacancies <br> <span>Edit job postings</span></h4>
                     </td>
                 </tr>
 
                 <tr>
                     <td width="60px">
-                        <div class="imgBx"><img src="~/Admin/assets/imgs/customer02.jpg" alt=""></div>
+                        <div class="imgBx">
+                            <ion-icon name="stats-chart-outline" style="font-size: 40px; color: var(--blue);"></ion-icon>
+                        </div>
                     </td>
                     <td>
-                        <h4>David <br> <span>Italy</span></h4>
+                        <h4>View Reports <br> <span>Analytics & insights</span></h4>
                     </td>
                 </tr>
 
                 <tr>
                     <td width="60px">
-                        <div class="imgBx"><img src="~/Admin/assets/imgs/customer01.jpg" alt=""></div>
+                        <div class="imgBx">
+                            <ion-icon name="settings-outline" style="font-size: 40px; color: var(--blue);"></ion-icon>
+                        </div>
                     </td>
                     <td>
-                        <h4>Amit <br> <span>India</span></h4>
+                        <h4>Settings <br> <span>System configuration</span></h4>
                     </td>
                 </tr>
 
                 <tr>
                     <td width="60px">
-                        <div class="imgBx"><img src="~/Admin/assets/imgs/customer01.jpg" alt=""></div>
+                        <div class="imgBx">
+                            <ion-icon name="mail-outline" style="font-size: 40px; color: var(--blue);"></ion-icon>
+                        </div>
                     </td>
                     <td>
-                        <h4>David <br> <span>Italy</span></h4>
+                        <h4>Email Templates <br> <span>Manage communications</span></h4>
                     </td>
                 </tr>
 
                 <tr>
                     <td width="60px">
-                        <div class="imgBx"><img src="~/Admin/assets/imgs/customer02.jpg" alt=""></div>
+                        <div class="imgBx">
+                            <ion-icon name="help-circle-outline" style="font-size: 40px; color: var(--blue);"></ion-icon>
+                        </div>
                     </td>
                     <td>
-                        <h4>Amit <br> <span>India</span></h4>
+                        <h4>Help & Support <br> <span>Get assistance</span></h4>
                     </td>
                 </tr>
             </table>

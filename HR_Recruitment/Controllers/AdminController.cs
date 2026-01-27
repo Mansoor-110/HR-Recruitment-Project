@@ -16,7 +16,58 @@ namespace Admin.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var vm = new HrDashboardVM();
+
+            // 🔹 Vacancies
+            vm.TotalVacancies = _context.Vacancies.Count();
+
+            vm.OpenVacancies = _context.Vacancies
+                .Count(v => v.Status == "Open");
+
+            // 🔹 Applicants
+            vm.TotalApplicants = _context.Applicants.Count();
+
+            // 🔹 Applications
+            vm.TotalApplications = _context.ApplicantVacancies.Count();
+
+            vm.PendingApplications = _context.ApplicantVacancies
+                .Count(av => av.Status == "Applied");
+
+            vm.ShortlistedApplications = _context.ApplicantVacancies
+                .Count(av => av.Status == "Selected");
+
+            vm.RejectedApplications = _context.ApplicantVacancies
+                .Count(av => av.Status == "Rejected");
+
+            // 🔹 Recent Applications (Last 5)
+            vm.RecentApplications = _context.ApplicantVacancies
+                .Include(av => av.Applicant)
+                .Include(av => av.Vacancy)
+                    .ThenInclude(v => v.Department)
+                .OrderByDescending(av => av.AppliedDate)
+                .Take(5)
+                .Select(av => new RecentApplicationVM
+                {
+                    ApplicantName = av.Applicant.FullName,
+                    JobTitle = av.Vacancy.Title,
+                    DepartmentName = av.Vacancy.Department.DepartmentName,
+                    AppliedDate = av.AppliedDate,
+                    ApplicationStatus = av.Status
+                })
+                .ToList();
+
+            return View(vm);
+        }
+        
+        public IActionResult Users()
+        {
+            var applicants = _context.Applicants
+                 .Include(a => a.User)
+                 .Include(a => a.ApplicantVacancies)
+                 .OrderByDescending(a => a.CreatedDate)
+                 .ToList();
+
+            return View(applicants);
         }
         public IActionResult AddVacancy()
         {

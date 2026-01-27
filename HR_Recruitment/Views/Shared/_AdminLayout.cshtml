@@ -34,11 +34,11 @@
                 </li>
 
                 <li>
-                    <a href="~/Admin/#">
+                    <a asp-action="Users" asp-controller="Admin">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
-                        <span class="title">Customers</span>
+                        <span class="title">Users</span>
                     </a>
                 </li>
 
@@ -60,23 +60,9 @@
                     </a>
                 </li>
 
-                <li>
-                    <a href="~/Admin/#">
-                        <span class="icon">
-                            <ion-icon name="settings-outline"></ion-icon>
-                        </span>
-                        <span class="title">Settings</span>
-                    </a>
-                </li>
+           
 
-                <li>
-                    <a href="~/Admin/#">
-                        <span class="icon">
-                            <ion-icon name="lock-closed-outline"></ion-icon>
-                        </span>
-                        <span class="title">Password</span>
-                    </a>
-                </li>
+           
 
                 <li>
                     <a asp-action="Logout" asp-controller="Auth">
