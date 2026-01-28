@@ -60,6 +60,7 @@
                                 <div class="main-menu">
                                     <nav class="d-none d-lg-block">
                                         <ul id="navigation">
+
                                             <li><a asp-action="index" ">Home</a></li>
                                             <li><a asp-action="FindJob">Find a Jobs </a></li>
                                             <li><a asp-action="About">About</a></li>
@@ -72,7 +73,32 @@
                                                 </ul>
                                             </li>
                                             <li><a asp-action="Contact">Contact</a></li>
+
+                                            <!-- AUTH (MOBILE) -->
+                                            @if (Context.Session.GetInt32("UserId") == null)
+                                            {
+                                                <li class="auth-btn register d-lg-none btn head-btn2 text-white">
+                                                    <a asp-action="Register" asp-controller="Auth">Register</a>
+                                                </li>
+                                                <li class="auth-btn login d-lg-none btn head-btn2">
+                                                    <a asp-action="Login" asp-controller="Auth">Login</a>
+                                                </li>
+                                            }
+                                            else
+                                            {
+                                                <li class="auth-btn d-lg-none">
+                                                    <a asp-action="Profile" asp-controller="Home" style="color: #fb246a; font-size: 30px; margin-left: 50px; display: inline-block; vertical-align: middle; line-height: 40px;"> <i class="fas fa-user-circle"></i>  </a>
+                                                </li>
+                                                <li class="auth-btn login d-lg-none btn head-btn2">
+                                                    <a asp-action="Logout" asp-controller="Auth">Logout</a>
+                                                </li>
+                                            }
+
+
+
                                         </ul>
+
+
                                     </nav>
                                 </div>
                                 <!-- Header-btn -->
@@ -92,6 +118,9 @@
                                     <a asp-action="Login" asp-controller="Auth" class="btn head-btn2">Login</a>
                                     }
                                 </div>
+
+
+
                             </div>
                         </div>
                         <!-- Mobile Menu -->

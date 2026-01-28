@@ -6,6 +6,7 @@ wwwroot\assets\css\animate.min.css
 wwwroot\assets\css\bootstrap.min.css
 wwwroot\assets\css\flaticon.css
 wwwroot\assets\css\fontawesome-all.min.css
+wwwroot\assets\css\HrCss.css
 wwwroot\assets\css\magnific-popup.css
 wwwroot\assets\css\nice-select.css
 wwwroot\assets\css\owl.carousel.min.css

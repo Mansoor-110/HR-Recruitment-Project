@@ -9,117 +9,121 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HR_Recruitment
 build_property.RootNamespace = HR_Recruitment
-build_property.ProjectDir = C:\Users\asp.APTECHNK1\Desktop\HR-Recruitment-Project\HR_Recruitment\
+build_property.ProjectDir = C:\Users\aliya\Contacts\Desktop\HR-Recruitment-Project\HR_Recruitment\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\asp.APTECHNK1\Desktop\HR-Recruitment-Project\HR_Recruitment
+build_property.MSBuildProjectDirectory = C:\Users\aliya\Contacts\Desktop\HR-Recruitment-Project\HR_Recruitment
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/AddVacancy.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/AddVacancy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkVmFjYW5jeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/Applications.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/Applications.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQXBwbGljYXRpb25zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/Index.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/ComplaintsList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ29tcGxhaW50c0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/ScheduleInterview.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/ScheduleInterview.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2NoZWR1bGVJbnRlcnZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/Users.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Auth/Login.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Auth/Register.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Auth/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Auth/VerifyOTP.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Auth/VerifyOTP.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxWZXJpZnlPVFAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Home/About.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Home/Blog.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Home/Blog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCbG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Home/Blog_Details.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Home/Blog_Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCbG9nX0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Home/Contact.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Home/FindJob.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Home/FindJob.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGaW5kSm9iLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Home/Index.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Home/JobDetails.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Home/JobDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxKb2JEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Home/Profile.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Home/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Interviewer/Index.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Interviewer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJ2aWV3ZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Interviewer/Interviews.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Interviewer/Interviews.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJ2aWV3ZXJcSW50ZXJ2aWV3cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Interviewer/ScheduledInterviews.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Interviewer/ScheduledInterviews.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJ2aWV3ZXJcU2NoZWR1bGVkSW50ZXJ2aWV3cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Shared/Error.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Shared/_AdminLayout.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Shared/_InterviewerLayout.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Shared/_InterviewerLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9JbnRlcnZpZXdlckxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/_ViewImports.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/_ViewStart.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asp.APTECHNK1/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Shared/_Layout.cshtml]
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-4ipdc8t57m

@@ -1,4 +1,5 @@
-﻿using HR_Recruitment.Models;
+﻿using HR_Recruitment.Helpers;
+using HR_Recruitment.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
@@ -85,6 +86,8 @@ namespace HR_Recruitment.Controllers
             var applicant = _context.Applicants
                 .FirstOrDefault(a => a.UserId == userId);
 
+            var user = _context.Users.FirstOrDefault(u => u.UserId == userId);
+
             if (applicant == null)
                 return RedirectToAction("Login", "Auth");
 
@@ -109,6 +112,35 @@ namespace HR_Recruitment.Controllers
 
             _context.ApplicantVacancies.Add(apply);
             _context.SaveChanges();
+
+            var vacancy = _context.Vacancies.FirstOrDefault(v => v.VacancyId == VacancyId);
+
+            string subject = "Application Received – JobFinder";
+
+            string body = $@"
+        <h3>Hello {applicant.FullName},</h3>
+        <p>
+            You have successfully applied for the position of 
+            <b>{vacancy?.Title}</b>.
+        </p>
+        <p>
+            Our HR team will review your application and contact you
+            if your profile matches our requirements.
+        </p>
+        <br/>
+        <p>
+            Regards,<br/>
+            <b>JobFinder HR Team</b>
+        </p>
+    ";
+
+            EmailHelper.Send(
+                user.Email,
+                subject,
+                body
+            );
+
+
 
             // 5️⃣ Success
             TempData["Success"] = "Application submitted successfully!";
@@ -156,7 +188,22 @@ namespace HR_Recruitment.Controllers
         {
             return View();
         }
-   
+
+        [HttpPost]
+        public IActionResult SubmitComplaint(Complaint complaint)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Complaints.Add(complaint);
+                _context.SaveChanges();
+
+                TempData["Success"] = "Your complaint has been submitted successfully!";
+                return RedirectToAction("Contact");
+            }
+
+            return View("Contact");
+        }
+
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -1,4 +1,5 @@
-﻿using HR_Recruitment.Models;
+﻿using HR_Recruitment.Helpers;
+using HR_Recruitment.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -161,6 +162,43 @@ namespace Admin.Controllers
             _context.Interviews.Add(interview);
             _context.SaveChanges();
 
+            // 1. Get ApplicantVacancy by Id
+            var applicantVacancy = _context.ApplicantVacancies
+                .Include(av => av.Applicant)
+                .FirstOrDefault(av => av.ApplicantVacancyId == vm.ApplicantVacancyId);
+
+            if (applicantVacancy == null)
+            {
+                // handle error - e.g. return NotFound or error message
+            }
+
+            var applicant = applicantVacancy.Applicant;
+
+            // 2. Get user from applicant.UserId
+            var user = _context.Users.FirstOrDefault(u => u.UserId == applicant.UserId);
+
+            // Format date and day
+            string interviewDate = interview.InterviewDate.ToString("dd MMM yyyy");
+            string interviewDay = interview.InterviewDate.ToString("dddd");
+
+            // Subject and body
+            string subject = "Interview Scheduled";
+
+            string body = $@"
+<h3>Hello {applicant.FullName},</h3>
+<p>Your interview has been scheduled successfully.</p>
+<p><b>Date:</b> {interviewDate}<br/>
+<b>Day:</b> {interviewDay}<br/>
+<b>Time:</b> {interview.StartTime}</p>
+<p>Please be available at the scheduled time.</p>
+<p>Regards,<br/>JobFinder HR Team</p>
+";
+
+            // Send email
+            EmailHelper.Send(user.Email, subject, body);
+
+
+
             return RedirectToAction("Applications"); // HR back to list
         }
 
@@ -194,8 +232,26 @@ namespace Admin.Controllers
             _context.SaveChanges();
         }
 
+        public IActionResult ComplaintsList()
+        {
+            var complaints = _context.Complaints
+                                .OrderByDescending(c => c.CreatedAt)
+                                .ToList();
+            return View(complaints);
+        }
 
-
-
+        [HttpPost]
+        public IActionResult DeleteComplaint(int id)
+        {
+            var complaint = _context.Complaints.Find(id);
+            if (complaint != null)
+            {
+                _context.Complaints.Remove(complaint);
+                _context.SaveChanges();
+            }
+            return RedirectToAction("ComplaintsList");
+        }
     }
+
+
 }

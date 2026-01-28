@@ -471,3 +471,4 @@ C:\Users\aliya\Contacts\Desktop\HR-Recruitment-Project\HR_Recruitment\obj\Debug\
 C:\Users\aliya\Contacts\Desktop\HR-Recruitment-Project\HR_Recruitment\obj\Debug\net8.0\HR_Recruitment.pdb
 C:\Users\aliya\Contacts\Desktop\HR-Recruitment-Project\HR_Recruitment\obj\Debug\net8.0\HR_Recruitment.genruntimeconfig.cache
 C:\Users\aliya\Contacts\Desktop\HR-Recruitment-Project\HR_Recruitment\obj\Debug\net8.0\ref\HR_Recruitment.dll
+C:\Users\aliya\Contacts\Desktop\HR-Recruitment-Project\HR_Recruitment\obj\Debug\net8.0\HR_Recruitment.sourcelink.json

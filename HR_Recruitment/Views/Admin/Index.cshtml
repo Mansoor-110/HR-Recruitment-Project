@@ -1,272 +1,347 @@
-﻿@model HrDashboardVM
+@model HrDashboardVM
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<!-- ========================= Main ==================== -->
-<div class="main">
-    <div class="topbar">
-        <div class="toggle">
-            <ion-icon name="menu-outline"></ion-icon>
+<link href="~/assets/css/HrCss.css" rel="stylesheet" />
+
+<!-- ========================= Dashboard Container ==================== -->
+<div class="dashboard-container">
+    
+    <!-- ========================= Header Bar ==================== -->
+    <div class="dashboard-header">
+        <div class="header-left">
+            <button class="menu-toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+            <h1 class="page-title">HR Dashboard</h1>
         </div>
 
-        <div class="search">
-            <label>
-                <input type="text" placeholder="Search here">
+        <div class="header-center">
+            <div class="search-box">
                 <ion-icon name="search-outline"></ion-icon>
-            </label>
+                <input type="text" placeholder="Search applications, vacancies, candidates...">
+            </div>
         </div>
 
-        <div class="user">
-            <img src="~/Admin/assets/imgs/customer01.jpg" alt="">
+        <div class="header-right">
+            <button class="notification-btn">
+                <ion-icon name="notifications-outline"></ion-icon>
+                <span class="badge">3</span>
+            </button>
+            <div class="user-profile">
+                <img src="~/Admin/assets/imgs/customer01.jpg" alt="User Profile">
+                <span class="user-name">Admin</span>
+            </div>
         </div>
     </div>
 
-    <!-- ======================= Cards ================== -->
-    <div class="cardBox">
-        <div class="card">
-            <div>
-                <div class="numbers">@Model.TotalVacancies</div>
-                <div class="cardName">Total Vacancies</div>
+    <!-- ======================= Stats Cards Grid ================== -->
+    <div class="stats-grid">
+        <!-- Row 1: Main Stats -->
+        <div class="stat-card stat-card-primary">
+            <div class="stat-content">
+                <div class="stat-value">@Model.TotalVacancies</div>
+                <div class="stat-label">Total Vacancies</div>
+                <div class="stat-trend">
+                    <ion-icon name="trending-up-outline"></ion-icon>
+                    <span>+12% from last month</span>
+                </div>
             </div>
-
-            <div class="iconBx">
+            <div class="stat-icon">
                 <ion-icon name="briefcase-outline"></ion-icon>
             </div>
         </div>
 
-        <div class="card">
-            <div>
-                <div class="numbers">@Model.OpenVacancies</div>
-                <div class="cardName">Open Vacancies</div>
+        <div class="stat-card stat-card-success">
+            <div class="stat-content">
+                <div class="stat-value">@Model.OpenVacancies</div>
+                <div class="stat-label">Open Vacancies</div>
+                <div class="stat-trend">
+                    <ion-icon name="trending-up-outline"></ion-icon>
+                    <span>Active now</span>
+                </div>
             </div>
-
-            <div class="iconBx">
+            <div class="stat-icon">
                 <ion-icon name="folder-open-outline"></ion-icon>
             </div>
         </div>
 
-        <div class="card">
-            <div>
-                <div class="numbers">@Model.TotalApplicants</div>
-                <div class="cardName">Total Applicants</div>
+        <div class="stat-card stat-card-info">
+            <div class="stat-content">
+                <div class="stat-value">@Model.TotalApplicants</div>
+                <div class="stat-label">Total Applicants</div>
+                <div class="stat-trend">
+                    <ion-icon name="trending-up-outline"></ion-icon>
+                    <span>+28 this week</span>
+                </div>
             </div>
-
-            <div class="iconBx">
+            <div class="stat-icon">
                 <ion-icon name="people-outline"></ion-icon>
             </div>
         </div>
 
-        <div class="card">
-            <div>
-                <div class="numbers">@Model.TotalApplications</div>
-                <div class="cardName">Total Applications</div>
+        <div class="stat-card stat-card-warning">
+            <div class="stat-content">
+                <div class="stat-value">@Model.TotalApplications</div>
+                <div class="stat-label">Total Applications</div>
+                <div class="stat-trend">
+                    <ion-icon name="document-text-outline"></ion-icon>
+                    <span>All submissions</span>
+                </div>
             </div>
-
-            <div class="iconBx">
-                <ion-icon name="document-text-outline"></ion-icon>
+            <div class="stat-icon">
+                <ion-icon name="documents-outline"></ion-icon>
             </div>
         </div>
-    </div>
 
-    <!-- ======================= Application Stats Cards ================== -->
-    <div class="cardBox">
-        <div class="card">
-            <div>
-                <div class="numbers">@Model.PendingApplications</div>
-                <div class="cardName">Pending</div>
+        <!-- Row 2: Application Status Stats -->
+        <div class="stat-card stat-card-pending">
+            <div class="stat-content">
+                <div class="stat-value">@Model.PendingApplications</div>
+                <div class="stat-label">Pending Review</div>
+                <div class="stat-progress">
+                    <div class="progress-bar" style="width: 65%;"></div>
+                </div>
             </div>
-
-            <div class="iconBx">
+            <div class="stat-icon">
                 <ion-icon name="time-outline"></ion-icon>
             </div>
         </div>
 
-        <div class="card">
-            <div>
-                <div class="numbers">@Model.ShortlistedApplications</div>
-                <div class="cardName">Selcted Applicants</div>
+        <div class="stat-card stat-card-selected">
+            <div class="stat-content">
+                <div class="stat-value">@Model.ShortlistedApplications</div>
+                <div class="stat-label">Selected Applicants</div>
+                <div class="stat-progress">
+                    <div class="progress-bar" style="width: 85%;"></div>
+                </div>
             </div>
-
-            <div class="iconBx">
+            <div class="stat-icon">
                 <ion-icon name="checkmark-circle-outline"></ion-icon>
             </div>
         </div>
 
-        <div class="card">
-            <div>
-                <div class="numbers">@Model.RejectedApplications</div>
-                <div class="cardName">Rejected</div>
+        <div class="stat-card stat-card-rejected">
+            <div class="stat-content">
+                <div class="stat-value">@Model.RejectedApplications</div>
+                <div class="stat-label">Rejected</div>
+                <div class="stat-progress">
+                    <div class="progress-bar" style="width: 35%;"></div>
+                </div>
             </div>
-
-            <div class="iconBx">
+            <div class="stat-icon">
                 <ion-icon name="close-circle-outline"></ion-icon>
             </div>
         </div>
 
-
-
-            <div class="iconBx">
-                <ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon>
+        <div class="stat-card stat-card-interview">
+            <div class="stat-content">
+                <div class="stat-value">@(Model.TotalApplications - Model.PendingApplications - Model.ShortlistedApplications - Model.RejectedApplications)</div>
+                <div class="stat-label">In Progress</div>
+                <div class="stat-progress">
+                    <div class="progress-bar" style="width: 50%;"></div>
+                </div>
+            </div>
+            <div class="stat-icon">
+                <ion-icon name="hourglass-outline"></ion-icon>
             </div>
         </div>
     </div>
 
-    <!-- ================ Recent Applications List ================= -->
-    <div class="details">
-        <div class="recentOrders">
-            <div class="cardHeader">
-                <h2>Recent Applications</h2>
-                <a href="#" class="btn">View All</a>
+    <!-- ================ Main Content Grid ================= -->
+    <div class="content-grid">
+        
+        <!-- Recent Applications Section -->
+        <div class="content-card applications-card">
+            <div class="card-header">
+                <div class="header-left">
+                    <h2>Recent Applications</h2>
+                    <span class="count-badge">@(Model.RecentApplications?.Count() ?? 0) new</span>
+                </div>
+                <a href="#" class="btn-view-all">
+                    View All
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
             </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <td>Applicant Name</td>
-                        <td>Job Title</td>
-                        <td>Department</td>
-                        <td>Applied Date</td>
-                        <td>Status</td>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    @if (Model.RecentApplications != null && Model.RecentApplications.Any())
-                    {
-                        @foreach (var application in Model.RecentApplications)
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Applicant</th>
+                            <th>Position</th>
+                            <th>Department</th>
+                            <th>Applied Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.RecentApplications != null && Model.RecentApplications.Any())
+                        {
+                            @foreach (var application in Model.RecentApplications)
+                            {
+                                <tr>
+                                    <td>
+                                        <div class="applicant-info">
+                                            <div class="applicant-avatar">
+                                                @application.ApplicantName.Substring(0, 1).ToUpper()
+                                            </div>
+                                            <span class="applicant-name">@application.ApplicantName</span>
+                                        </div>
+                                    </td>
+                                    <td><strong>@application.JobTitle</strong></td>
+                                    <td>@application.DepartmentName</td>
+                                    <td>@application.AppliedDate.ToString("MMM dd, yyyy")</td>
+                                    <td>
+                                        @if (application.ApplicationStatus == "Pending")
+                                        {
+                                            <span class="status-badge status-pending">
+                                                <ion-icon name="time-outline"></ion-icon>
+                                                Pending
+                                            </span>
+                                        }
+                                        else if (application.ApplicationStatus == "Shortlisted")
+                                        {
+                                            <span class="status-badge status-approved">
+                                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                Shortlisted
+                                            </span>
+                                        }
+                                        else if (application.ApplicationStatus == "Rejected")
+                                        {
+                                            <span class="status-badge status-rejected">
+                                                <ion-icon name="close-circle-outline"></ion-icon>
+                                                Rejected
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="status-badge status-progress">
+                                                <ion-icon name="hourglass-outline"></ion-icon>
+                                                @application.ApplicationStatus
+                                            </span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <button class="btn-action" title="View Details">
+                                            <ion-icon name="eye-outline"></ion-icon>
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
                         {
                             <tr>
-                                <td>@application.ApplicantName</td>
-                                <td>@application.JobTitle</td>
-                                <td>@application.DepartmentName</td>
-                                <td>@application.AppliedDate.ToString("MMM dd, yyyy")</td>
-                                <td>
-                                    @if (application.ApplicationStatus == "Pending")
-                                    {
-                                        <span class="status pending">@application.ApplicationStatus</span>
-                                    }
-                                    else if (application.ApplicationStatus == "Shortlisted")
-                                    {
-                                        <span class="status delivered">@application.ApplicationStatus</span>
-                                    }
-                                    else if (application.ApplicationStatus == "Rejected")
-                                    {
-                                        <span class="status return">@application.ApplicationStatus</span>
-                                    }
-                                    else
-                                    {
-                                        <span class="status inProgress">@application.ApplicationStatus</span>
-                                    }
+                                <td colspan="6" class="no-data">
+                                    <ion-icon name="document-outline"></ion-icon>
+                                    <p>No recent applications</p>
                                 </td>
                             </tr>
                         }
-                    }
-                    else
-                    {
-                        <tr>
-                            <td colspan="5" style="text-align: center;">No recent applications</td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
-        <!-- ================= Quick Actions ================ -->
-        <div class="recentCustomers">
-            <div class="cardHeader">
+        <!-- Quick Actions Section -->
+        <div class="content-card actions-card">
+            <div class="card-header">
                 <h2>Quick Actions</h2>
             </div>
 
-            <table>
-                <tr>
-                    <td width="60px">
-                        <div class="imgBx">
-                            <ion-icon name="add-circle-outline" style="font-size: 40px; color: var(--blue);"></ion-icon>
-                        </div>
-                    </td>
-                    <td>
-                        <h4>Post New Vacancy <br> <span>Create job posting</span></h4>
-                    </td>
-                </tr>
+            <div class="actions-list">
+                <a href="#" class="action-item">
+                    <div class="action-icon action-primary">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                    </div>
+                    <div class="action-content">
+                        <h4>Post New Vacancy</h4>
+                        <p>Create job posting</p>
+                    </div>
+                    <ion-icon name="chevron-forward-outline" class="action-arrow"></ion-icon>
+                </a>
 
-                <tr>
-                    <td width="60px">
-                        <div class="imgBx">
-                            <ion-icon name="people-outline" style="font-size: 40px; color: var(--blue);"></ion-icon>
-                        </div>
-                    </td>
-                    <td>
-                        <h4>View Applicants <br> <span>Manage candidates</span></h4>
-                    </td>
-                </tr>
+                <a href="#" class="action-item">
+                    <div class="action-icon action-success">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </div>
+                    <div class="action-content">
+                        <h4>View Applicants</h4>
+                        <p>Manage candidates</p>
+                    </div>
+                    <ion-icon name="chevron-forward-outline" class="action-arrow"></ion-icon>
+                </a>
 
-                <tr>
-                    <td width="60px">
-                        <div class="imgBx">
-                            <ion-icon name="document-text-outline" style="font-size: 40px; color: var(--blue);"></ion-icon>
-                        </div>
-                    </td>
-                    <td>
-                        <h4>Review Applications <br> <span>Process submissions</span></h4>
-                    </td>
-                </tr>
+                <a href="#" class="action-item">
+                    <div class="action-icon action-info">
+                        <ion-icon name="document-text-outline"></ion-icon>
+                    </div>
+                    <div class="action-content">
+                        <h4>Review Applications</h4>
+                        <p>Process submissions</p>
+                    </div>
+                    <ion-icon name="chevron-forward-outline" class="action-arrow"></ion-icon>
+                </a>
 
-                <tr>
-                    <td width="60px">
-                        <div class="imgBx">
-                            <ion-icon name="briefcase-outline" style="font-size: 40px; color: var(--blue);"></ion-icon>
-                        </div>
-                    </td>
-                    <td>
-                        <h4>Manage Vacancies <br> <span>Edit job postings</span></h4>
-                    </td>
-                </tr>
+                <a href="#" class="action-item">
+                    <div class="action-icon action-warning">
+                        <ion-icon name="briefcase-outline"></ion-icon>
+                    </div>
+                    <div class="action-content">
+                        <h4>Manage Vacancies</h4>
+                        <p>Edit job postings</p>
+                    </div>
+                    <ion-icon name="chevron-forward-outline" class="action-arrow"></ion-icon>
+                </a>
 
-                <tr>
-                    <td width="60px">
-                        <div class="imgBx">
-                            <ion-icon name="stats-chart-outline" style="font-size: 40px; color: var(--blue);"></ion-icon>
-                        </div>
-                    </td>
-                    <td>
-                        <h4>View Reports <br> <span>Analytics & insights</span></h4>
-                    </td>
-                </tr>
+                <a href="#" class="action-item">
+                    <div class="action-icon action-purple">
+                        <ion-icon name="stats-chart-outline"></ion-icon>
+                    </div>
+                    <div class="action-content">
+                        <h4>View Reports</h4>
+                        <p>Analytics & insights</p>
+                    </div>
+                    <ion-icon name="chevron-forward-outline" class="action-arrow"></ion-icon>
+                </a>
 
-                <tr>
-                    <td width="60px">
-                        <div class="imgBx">
-                            <ion-icon name="settings-outline" style="font-size: 40px; color: var(--blue);"></ion-icon>
-                        </div>
-                    </td>
-                    <td>
-                        <h4>Settings <br> <span>System configuration</span></h4>
-                    </td>
-                </tr>
+                <a href="#" class="action-item">
+                    <div class="action-icon action-dark">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </div>
+                    <div class="action-content">
+                        <h4>Settings</h4>
+                        <p>System configuration</p>
+                    </div>
+                    <ion-icon name="chevron-forward-outline" class="action-arrow"></ion-icon>
+                </a>
 
-                <tr>
-                    <td width="60px">
-                        <div class="imgBx">
-                            <ion-icon name="mail-outline" style="font-size: 40px; color: var(--blue);"></ion-icon>
-                        </div>
-                    </td>
-                    <td>
-                        <h4>Email Templates <br> <span>Manage communications</span></h4>
-                    </td>
-                </tr>
+                <a href="#" class="action-item">
+                    <div class="action-icon action-teal">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+                    <div class="action-content">
+                        <h4>Email Templates</h4>
+                        <p>Manage communications</p>
+                    </div>
+                    <ion-icon name="chevron-forward-outline" class="action-arrow"></ion-icon>
+                </a>
 
-                <tr>
-                    <td width="60px">
-                        <div class="imgBx">
-                            <ion-icon name="help-circle-outline" style="font-size: 40px; color: var(--blue);"></ion-icon>
-                        </div>
-                    </td>
-                    <td>
-                        <h4>Help & Support <br> <span>Get assistance</span></h4>
-                    </td>
-                </tr>
-            </table>
+                <a href="#" class="action-item">
+                    <div class="action-icon action-orange">
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                    </div>
+                    <div class="action-content">
+                        <h4>Help & Support</h4>
+                        <p>Get assistance</p>
+                    </div>
+                    <ion-icon name="chevron-forward-outline" class="action-arrow"></ion-icon>
+                </a>
+            </div>
         </div>
+
     </div>
 </div>

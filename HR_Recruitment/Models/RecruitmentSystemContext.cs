@@ -34,6 +34,9 @@ public partial class RecruitmentSystemContext : DbContext
 
     public virtual DbSet<Vacancy> Vacancies { get; set; }
 
+    public virtual DbSet<Complaint> Complaints { get; set; }
+
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Applicant>(entity =>
@@ -223,6 +226,32 @@ public partial class RecruitmentSystemContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Vacancies_Departments");
         });
+
+        modelBuilder.Entity<Complaint>(entity =>
+        {
+            entity.HasKey(e => e.ComplaintId)
+                  .HasName("PK_Complaints");
+
+            entity.Property(e => e.FullName)
+                  .HasMaxLength(150)
+                  .IsRequired();
+
+            entity.Property(e => e.Email)
+                  .HasMaxLength(150)
+                  .IsRequired();
+
+            entity.Property(e => e.Subject)
+                  .HasMaxLength(200)
+                  .IsRequired();
+
+            entity.Property(e => e.Details)
+                  .IsRequired();
+
+            entity.Property(e => e.CreatedAt)
+                  .HasDefaultValueSql("(getdate())")
+                  .HasColumnType("datetime");
+        });
+
 
         OnModelCreatingPartial(modelBuilder);
     }

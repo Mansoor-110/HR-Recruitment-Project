@@ -11,7 +11,7 @@ namespace HR_Recruitment.Helpers
 
             mail.From = new MailAddress(
                 "aliyanahmed833@gmail.com",
-                "HR Department | JobFinder Team"
+                "JobFinder Team"
             );
 
             mail.To.Add(to);
