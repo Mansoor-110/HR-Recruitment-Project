@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\HR_Recruitment.csproj": {}
+    "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\HR_Recruitment.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\HR_Recruitment.csproj": {
+    "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\HR_Recruitment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\HR_Recruitment.csproj",
+        "projectUniqueName": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\HR_Recruitment.csproj",
         "projectName": "HR_Recruitment",
-        "projectPath": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\HR_Recruitment.csproj",
-        "packagesPath": "C:\\Users\\aliya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\obj\\",
+        "projectPath": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\HR_Recruitment.csproj",
+        "packagesPath": "C:\\Users\\DELL 7310\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL 7310\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\aliya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL 7310\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -87,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.309/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
