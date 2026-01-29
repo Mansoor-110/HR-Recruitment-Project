@@ -32,6 +32,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ29tcGxhaW50c0xpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/Departments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVwYXJ0bWVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/EditDepartment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdERlcGFydG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/EditVacancy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFZhY2FuY3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/FinalDecision.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRmluYWxEZWNpc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,6 +58,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Admin/Vacancies.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmFjYW5jaWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/aliya/Contacts/Desktop/HR-Recruitment-Project/HR_Recruitment/Views/Auth/Login.cshtml]

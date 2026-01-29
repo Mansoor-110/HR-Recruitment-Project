@@ -4,44 +4,59 @@
 @model List<HR_Recruitment.Models.Complaint>
 
 <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     .complaints-container {
-        padding: 30px;
+        padding: 40px;
         margin-left: 300px;
-        background-color: #F2F2F2;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         min-height: 100vh;
     }
 
     .page-header {
-        margin-bottom: 30px;
+        margin-bottom: 35px;
+        animation: slideDown 0.5s ease-out;
     }
 
-        .page-header h1 {
-            font-size: 32px;
-            font-weight: 600;
-            color: #333;
-            margin: 0;
-        }
+
+    .page-header h1 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #2C3E50;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        letter-spacing: -0.5px;
+    }
 
     .table-card {
         background: white;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
         overflow: hidden;
+        animation: fadeInUp 0.6s ease-out;
+        border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
+
     .table-header {
-        padding: 20px 25px;
-        border-bottom: 2px solid #F2F2F2;
+        padding: 25px 30px;
+        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        border-bottom: none;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
         .table-header h2 {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 600;
-            color: #333;
+            color: white;
             margin: 0;
+            letter-spacing: 0.3px;
         }
 
     .complaints-table {
@@ -51,83 +66,162 @@
     }
 
         .complaints-table thead {
-            background-color: #F2F2F2;
-            display: none; /* hide header for mobile style */
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            border-bottom: 3px solid #e74c3c;
         }
+
+            .complaints-table thead th {
+                padding: 18px 30px;
+                text-align: left;
+                font-weight: 700;
+                font-size: 13px;
+                color: #495057;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
 
         .complaints-table tbody tr {
-            display: block;
-            margin-bottom: 15px;
-            border: 1px solid #F2F2F2;
-            border-radius: 8px;
-            padding: 15px;
-            transition: background-color 0.2s ease;
+            border-bottom: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
+            .complaints-table tbody tr::before {
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 4px;
+                background: #e74c3c;
+                transform: scaleY(0);
+                transition: transform 0.3s ease;
+            }
+
             .complaints-table tbody tr:hover {
-                background-color: #FFF5F9;
+                background: linear-gradient(to right, #fff5f5, #ffffff);
+                box-shadow: 0 4px 15px rgba(231, 76, 60, 0.1);
+                transform: translateX(5px);
+            }
+
+                .complaints-table tbody tr:hover::before {
+                    transform: scaleY(1);
+                }
+
+            .complaints-table tbody tr:last-child {
+                border-bottom: none;
             }
 
         .complaints-table tbody td {
-            display: block;
-            padding: 8px 0;
-            border: none;
+            padding: 20px 30px;
             font-size: 15px;
-            color: #333;
+            color: #2C3E50;
+            vertical-align: middle;
         }
 
-            .complaints-table tbody td:before {
-                content: attr(data-label);
+            .complaints-table tbody td:nth-child(1) {
                 font-weight: 600;
-                color: #666;
-                display: inline-block;
-                width: 120px;
+                color: #2C3E50;
+                font-size: 16px;
+            }
+
+            .complaints-table tbody td:nth-child(2) {
+                color: #5a6c7d;
+            }
+
+            .complaints-table tbody td:nth-child(3) {
+                font-weight: 500;
+                color: #34495e;
+            }
+
+            .complaints-table tbody td:nth-child(4) {
+                color: #7f8c8d;
+                max-width: 300px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .complaints-table tbody td:nth-child(5) {
+                color: #95a5a6;
+                font-size: 14px;
+                font-weight: 500;
             }
 
     .btn-delete {
-        background-color: #E53E3E;
+        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
         color: white;
-        padding: 8px 16px;
+        padding: 10px 20px;
         border: none;
-        border-radius: 8px;
+        border-radius: 10px;
         font-size: 14px;
-        font-weight: 500;
+        font-weight: 600;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         text-decoration: none;
         display: inline-block;
-        box-shadow: 0 2px 6px rgba(229, 62, 62, 0.2);
+        box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        letter-spacing: 0.3px;
+        position: relative;
+        overflow: hidden;
     }
 
+        .btn-delete::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn-delete:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
         .btn-delete:hover {
-            background-color: #C53030;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(197, 48, 48, 0.3);
+            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
             color: white;
             text-decoration: none;
         }
 
+        .btn-delete:active {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        }
+
     .empty-state {
         text-align: center;
-        padding: 60px 20px;
-        color: #999;
+        padding: 80px 20px;
+        color: #95a5a6;
+        animation: fadeIn 0.6s ease-out;
     }
 
-        .empty-state i {
-            font-size: 64px;
-            color: #DDD;
-            margin-bottom: 20px;
-        }
 
-        .empty-state p {
-            font-size: 18px;
-            margin: 0;
-        }
+    .empty-state i {
+        font-size: 80px;
+        color: #dfe6e9;
+        margin-bottom: 25px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+
+    .empty-state p {
+        font-size: 20px;
+        margin: 0;
+        font-weight: 500;
+        color: #7f8c8d;
+    }
+
 </style>
 
 <div class="complaints-container">
     <div class="page-header">
-        <h1>Complaints</h1>
+        <h1>📢 Complaints</h1>
     </div>
 
     <div class="table-card">

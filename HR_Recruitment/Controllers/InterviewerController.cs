@@ -113,30 +113,46 @@ namespace HR_Recruitment.Controllers
 
             if (result == "Selected")
             {
-                subject = "Interview Result – Congratulations!";
+                subject = "Interview Result – Shortlisted";
+
                 body = $@"
-            <h3>Dear {applicant.FullName},</h3>
-            <p>Congratulations! You have been <b>selected</b> for the position <b>{appVacancy.Vacancy?.Title}</b>.</p>
-            <p>Our HR team will contact you for the next steps.</p>
-            <p>Best Regards,<br/>JobFinder Team</p>
-        ";
+<h3>Dear {applicant.FullName},</h3>
+
+<p>We are pleased to inform you that you have been <b>successfully selected by the interviewer</b> 
+for the position of <b>{appVacancy.Vacancy?.Title}</b>.</p>
+
+<p>This means you have cleared the interview stage. Your application has now been forwarded to 
+the HR department for <b>final approval</b>.</p>
+
+<p>Once the HR approval is completed, you will be contacted with further details regarding 
+joining and onboarding.</p>
+
+<p>Thank you for your time and effort.</p>
+
+<p>Best Regards,<br/>
+JobFinder Team</p>
+";
             }
             else if (result == "Rejected")
             {
                 subject = "Interview Result – Update";
+
                 body = $@"
-            <h3>Dear {applicant.FullName},</h3>
-            <p>Thank you for attending the interview for <b>{appVacancy.Vacancy?.Title}</b>.</p>
-            <p>Unfortunately, you have not been selected for this position.</p>
-            <p>We wish you all the best for your future endeavors.</p>
-            <p>Regards,<br/>JobFinder Team</p>
-        ";
+<h3>Dear {applicant.FullName},</h3>
+
+<p>Thank you for attending the interview for the position of 
+<b>{appVacancy.Vacancy?.Title}</b>.</p>
+
+<p>After careful consideration, we regret to inform you that you have not been selected 
+to proceed further at this time.</p>
+
+<p>We truly appreciate your interest and wish you success in your future endeavors.</p>
+
+<p>Regards,<br/>
+JobFinder Team</p>
+";
             }
-            else
-            {
-                // If result is neither Selected nor Rejected, don't send email
-                return;
-            }
+
 
             EmailHelper.Send(user.Email, subject, body);
         }

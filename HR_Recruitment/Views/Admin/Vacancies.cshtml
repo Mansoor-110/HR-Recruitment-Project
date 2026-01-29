@@ -1,0 +1,30 @@
+﻿@model List<HR_Recruitment.Models.Vacancy>
+
+<h3>All Vacancies</h3>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Department</th>
+            <th>Openings</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var v in Model)
+        {
+            <tr>
+                <td>@v.Title</td>
+                <td>@v.Department.DepartmentName</td>
+                <td>@v.TotalOpenings</td>
+                <td>@v.Status</td>
+                <td>
+                    <a asp-action="EditVacancy" asp-route-id="@v.VacancyId" class="btn btn-warning btn-sm">Edit</a>
+                    <a asp-action="DeleteVacancy" asp-route-id="@v.VacancyId" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

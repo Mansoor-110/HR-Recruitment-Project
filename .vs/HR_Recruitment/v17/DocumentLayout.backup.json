@@ -3,6 +3,62 @@
   "WorkspaceRootPath": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\admin\\editdepartment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\admin\\editdepartment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\admin\\departments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\admin\\departments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\admin\\editvacancy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\admin\\editvacancy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\admin\\vacancies.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\admin\\vacancies.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\models\\vacancy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\models\\vacancy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\admin\\finaldecision.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\admin\\finaldecision.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\admin\\complaintslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\admin\\complaintslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\controllers\\interviewercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\controllers\\interviewercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\admin\\applications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\admin\\applications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\models\\hrapplicationvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\models\\hrapplicationvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\models\\applicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\models\\applicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\models\\finaldecisionvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\models\\finaldecisionvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,20 +67,8 @@
       "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\shared\\_interviewerlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\controllers\\interviewercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\controllers\\interviewercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\models\\applicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\models\\applicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\models\\scheduleinterviewvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,16 +99,8 @@
       "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\admin\\scheduleinterview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\models\\hrdashboardvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\models\\hrdashboardvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\admin\\complaintslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\admin\\complaintslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -73,10 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\models\\complaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\models\\complaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\views\\admin\\applications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|solutionrelative:hr_recruitment\\views\\admin\\applications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98647CA6-1C60-4F3C-A566-C61CC2CF4CD2}|HR_Recruitment\\HR_Recruitment.csproj|c:\\users\\aliya\\contacts\\desktop\\hr-recruitment-project\\hr_recruitment\\models\\recruitmentsystemcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -118,33 +150,123 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "HR_Recruitment\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "HR_Recruitment\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFYAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T15:02:52.184Z",
+              "DocumentIndex": 1,
+              "Title": "EditDepartment.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\EditDepartment.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Admin\\EditDepartment.cshtml",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\EditDepartment.cshtml*",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Admin\\EditDepartment.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-29T10:09:00.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Departments.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\Departments.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Admin\\Departments.cshtml",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\Departments.cshtml*",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Admin\\Departments.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-29T10:07:01.545Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "EditVacancy.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\EditVacancy.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Admin\\EditVacancy.cshtml",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\EditVacancy.cshtml*",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Admin\\EditVacancy.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-29T10:06:17.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Vacancy.cs",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\Vacancy.cs",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Models\\Vacancy.cs",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\Vacancy.cs",
+              "RelativeToolTip": "HR_Recruitment\\Models\\Vacancy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T10:05:12.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Vacancies.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\Vacancies.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Admin\\Vacancies.cshtml",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\Vacancies.cshtml",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Admin\\Vacancies.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-29T10:04:52.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FinalDecision.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\FinalDecision.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Admin\\FinalDecision.cshtml",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\FinalDecision.cshtml",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Admin\\FinalDecision.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-29T08:01:46.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Shared\\_AdminLayout.cshtml*",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Shared\\_AdminLayout.cshtml*",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAE8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T14:56:33.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HRApplicationVM.cs",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\HRApplicationVM.cs",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Models\\HRApplicationVM.cs",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\HRApplicationVM.cs",
+              "RelativeToolTip": "HR_Recruitment\\Models\\HRApplicationVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T08:20:03.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "HR_Recruitment\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAADwvy8AAAApAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Controllers\\AdminController.cs*",
+              "RelativeToolTip": "HR_Recruitment\\Controllers\\AdminController.cs*",
+              "ViewState": "AgIAAIsBAAAAAAAAAAAAAJwBAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-27T14:50:27.103Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "Applicant.cs",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\Applicant.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\Applicant.cs",
@@ -152,12 +274,47 @@
               "RelativeToolTip": "HR_Recruitment\\Models\\Applicant.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T15:11:13.424Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T15:11:13.424Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
+              "Title": "InterviewerController.cs",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Controllers\\InterviewerController.cs",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Controllers\\InterviewerController.cs",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Controllers\\InterviewerController.cs",
+              "RelativeToolTip": "HR_Recruitment\\Controllers\\InterviewerController.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAAAIUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T14:50:29.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Applications.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\Applications.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Admin\\Applications.cshtml",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\Applications.cshtml",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Admin\\Applications.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T15:05:26.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ComplaintsList.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\ComplaintsList.cshtml",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Admin\\ComplaintsList.cshtml",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\ComplaintsList.cshtml",
+              "RelativeToolTip": "HR_Recruitment\\Views\\Admin\\ComplaintsList.cshtml",
+              "ViewState": "AgIAADsAAAAAAAAAAAAUwFkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-28T04:03:14.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Controllers\\AuthController.cs",
@@ -165,25 +322,35 @@
               "RelativeToolTip": "HR_Recruitment\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAJwAAAAAAAAAAAAIwK0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T16:12:52.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T16:12:52.013Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InterviewerController.cs",
-              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Controllers\\InterviewerController.cs",
-              "RelativeDocumentMoniker": "HR_Recruitment\\Controllers\\InterviewerController.cs",
-              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Controllers\\InterviewerController.cs",
-              "RelativeToolTip": "HR_Recruitment\\Controllers\\InterviewerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "FinalDecisionVM.cs",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\FinalDecisionVM.cs",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Models\\FinalDecisionVM.cs",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\FinalDecisionVM.cs",
+              "RelativeToolTip": "HR_Recruitment\\Models\\FinalDecisionVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T14:50:29.231Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T08:00:32.511Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 18,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "HR_Recruitment\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "HR_Recruitment\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFYAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T15:02:52.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "_InterviewerLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Shared\\_InterviewerLayout.cshtml",
               "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Shared\\_InterviewerLayout.cshtml",
@@ -191,25 +358,23 @@
               "RelativeToolTip": "HR_Recruitment\\Views\\Shared\\_InterviewerLayout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-27T14:50:51.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T14:50:51.652Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 14,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\Index.cshtml",
               "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Admin\\Index.cshtml",
               "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\Index.cshtml",
               "RelativeToolTip": "HR_Recruitment\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-27T15:42:29.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T15:42:29.909Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 21,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\Employee.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\Employee.cs",
@@ -217,12 +382,11 @@
               "RelativeToolTip": "HR_Recruitment\\Models\\Employee.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T16:30:23.474Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T16:30:23.474Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 20,
               "Title": "InterviewVM.cs",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\InterviewVM.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\InterviewVM.cs",
@@ -230,12 +394,11 @@
               "RelativeToolTip": "HR_Recruitment\\Models\\InterviewVM.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T16:32:46.241Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T16:32:46.241Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 19,
               "Title": "Interview.cs",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\Interview.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\Interview.cs",
@@ -243,12 +406,11 @@
               "RelativeToolTip": "HR_Recruitment\\Models\\Interview.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T16:32:46.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T16:32:46.961Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 17,
               "Title": "ScheduleInterviewVM.cs",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\ScheduleInterviewVM.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\ScheduleInterviewVM.cs",
@@ -256,12 +418,11 @@
               "RelativeToolTip": "HR_Recruitment\\Models\\ScheduleInterviewVM.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T16:37:33.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T16:37:33.032Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 22,
               "Title": "EmailHelper.cs",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Helpers\\EmailHelper.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Helpers\\EmailHelper.cs",
@@ -269,12 +430,11 @@
               "RelativeToolTip": "HR_Recruitment\\Helpers\\EmailHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T16:25:36.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T16:25:36.405Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 24,
               "Title": "HrDashboardVM.cs",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\HrDashboardVM.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\HrDashboardVM.cs",
@@ -286,19 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ComplaintsList.cshtml",
-              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\ComplaintsList.cshtml",
-              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Admin\\ComplaintsList.cshtml",
-              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\ComplaintsList.cshtml",
-              "RelativeToolTip": "HR_Recruitment\\Views\\Admin\\ComplaintsList.cshtml",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAAAJsAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-28T04:03:14.892Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 23,
               "Title": "ScheduleInterview.cshtml",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\ScheduleInterview.cshtml",
               "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Admin\\ScheduleInterview.cshtml",
@@ -306,12 +454,11 @@
               "RelativeToolTip": "HR_Recruitment\\Views\\Admin\\ScheduleInterview.cshtml",
               "ViewState": "AgIAANoAAAAAAAAAAAAAAAEBAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-28T15:54:24.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T15:54:24.874Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 27,
               "Title": "RecruitmentSystemContext.cs",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\RecruitmentSystemContext.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\RecruitmentSystemContext.cs",
@@ -323,20 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "HR_Recruitment\\Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-27T14:56:33.332Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 25,
               "Title": "Contact.cshtml",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Home\\Contact.cshtml",
               "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Home\\Contact.cshtml",
@@ -348,7 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 26,
               "Title": "Complaint.cs",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\Complaint.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\Complaint.cs",
@@ -360,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 32,
               "Title": "Users.cshtml",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\Users.cshtml",
               "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Admin\\Users.cshtml",
@@ -372,19 +506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Applications.cshtml",
-              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\Applications.cshtml",
-              "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Admin\\Applications.cshtml",
-              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\Applications.cshtml",
-              "RelativeToolTip": "HR_Recruitment\\Views\\Admin\\Applications.cshtml",
-              "ViewState": "AgIAAOsAAAAAAAAAAAAUwAMBAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-27T15:05:26.257Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 28,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Shared\\_Layout.cshtml",
@@ -396,7 +518,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 29,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\wwwroot\\assets\\css\\style.css",
               "RelativeDocumentMoniker": "HR_Recruitment\\wwwroot\\assets\\css\\style.css",
@@ -408,7 +530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 33,
               "Title": "AddVacancy.cshtml",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Views\\Admin\\AddVacancy.cshtml",
               "RelativeDocumentMoniker": "HR_Recruitment\\Views\\Admin\\AddVacancy.cshtml",
@@ -420,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 30,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\appsettings.json",
               "RelativeDocumentMoniker": "HR_Recruitment\\appsettings.json",
@@ -432,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 31,
               "Title": "RecentApplicationVM.cs",
               "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\HR-Recruitment-Project\\HR_Recruitment\\Models\\RecentApplicationVM.cs",
               "RelativeDocumentMoniker": "HR_Recruitment\\Models\\RecentApplicationVM.cs",

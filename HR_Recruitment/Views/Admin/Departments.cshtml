@@ -1,0 +1,21 @@
+﻿@model List<HR_Recruitment.Models.Department>
+
+<a asp-action="AddDepartment" class="btn btn-primary mb-3">Add Department</a>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var d in Model)
+    {
+        <tr>
+            <td>@d.DepartmentName</td>
+            <td>
+                <a asp-action="EditDepartment" asp-route-id="@d.DepartmentId" class="btn btn-warning btn-sm">Edit</a>
+                <a asp-action="DeleteDepartment" asp-route-id="@d.DepartmentId" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

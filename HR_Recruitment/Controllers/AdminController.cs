@@ -206,31 +206,118 @@ namespace Admin.Controllers
         public IActionResult FinalDecision()
         {
             var data = _context.ApplicantVacancies
-                .Where(x => x.Status == "InterviewApproved"
-                         || x.Status == "InterviewRejected")
+                .Include(av => av.Applicant)
+                .Include(av => av.Vacancy)
+                .Where(av => av.Status == "Selected")
+                .Select(av => new FinalDecisionVM
+                {
+                    ApplicantVacancyId = av.ApplicantVacancyId,
+                    ApplicantName = av.Applicant.FullName,
+                    JobTitle = av.Vacancy.Title,
+                    AppliedDate = av.AppliedDate,
+                    CurrentStatus = av.Status
+                })
                 .ToList();
 
             return View(data);
         }
 
+
+
         public IActionResult FinalApprove(int id)
         {
-            UpdateFinal(id, "HRApproved");
+            var app = _context.ApplicantVacancies
+                .Include(av => av.Applicant)
+                .Include(av => av.Vacancy)
+                .FirstOrDefault(av => av.ApplicantVacancyId == id);
+
+            if (app == null)
+                return NotFound();
+
+            // ✅ Final status
+            app.Status = "Confirmed";
+            _context.SaveChanges();
+
+            // 🔹 Get user email
+            var user = _context.Users.FirstOrDefault(u => u.UserId == app.Applicant.UserId);
+
+            if (user != null)
+            {
+                string subject = "Congratulations! You Are Selected 🎉";
+
+                string body = $@"
+<h3>Dear {app.Applicant.FullName},</h3>
+
+<p>We are pleased to inform you that you have been <b>successfully selected</b> for the position of 
+<b>{app.Vacancy.Title}</b>.</p>
+
+<p>You are requested to join the company starting from <b>tomorrow</b>.</p>
+
+<p>Further details will be shared with you by our HR team.</p>
+
+<p>Congratulations once again, and welcome to the team!</p>
+
+<br/>
+<p>Best Regards,<br/>
+<b>HR Department</b></p>
+";
+
+                EmailHelper.Send(user.Email, subject, body);
+            }
+
             return RedirectToAction("FinalDecision");
         }
+
 
         public IActionResult FinalReject(int id)
         {
-            UpdateFinal(id, "HRRejected");
+            var app = _context.ApplicantVacancies
+                .Include(av => av.Applicant)
+                .Include(av => av.Vacancy)
+                .FirstOrDefault(av => av.ApplicantVacancyId == id);
+
+            if (app == null)
+                return NotFound();
+
+            // ✅ Final HR rejection
+            app.Status = "Rejected";
+            _context.SaveChanges();
+
+            // 🔹 Get user email
+            var user = _context.Users.FirstOrDefault(u => u.UserId == app.Applicant.UserId);
+
+            if (user != null)
+            {
+                string subject = "Application Update – Final Decision";
+
+                string body = $@"
+<h3>Dear {app.Applicant.FullName},</h3>
+
+<p>Thank you for your interest in the position of 
+<b>{app.Vacancy.Title}</b> and for taking the time to go through our recruitment process.</p>
+
+<p>After careful consideration, we regret to inform you that we will not be moving forward 
+with your application at this stage.</p>
+
+<p>This decision was made after a final review by our HR team and does not reflect negatively 
+on your skills or experience.</p>
+
+<p>We truly appreciate your effort and encourage you to apply again in the future.</p>
+
+<p>Wishing you every success ahead.</p>
+
+<br/>
+<p>Kind Regards,<br/>
+<b>HR Department</b></p>
+";
+
+                EmailHelper.Send(user.Email, subject, body);
+            }
+
             return RedirectToAction("FinalDecision");
         }
 
-        private void UpdateFinal(int id, string status)
-        {
-            var app = _context.ApplicantVacancies.Find(id);
-            app.Status = status;
-            _context.SaveChanges();
-        }
+
 
         public IActionResult ComplaintsList()
         {
@@ -251,6 +338,112 @@ namespace Admin.Controllers
             }
             return RedirectToAction("ComplaintsList");
         }
+
+
+        public IActionResult Vacancies()
+        {
+            var data = _context.Vacancies
+                .Include(v => v.Department)
+                .OrderByDescending(v => v.CreatedDate)
+                .ToList();
+
+            return View(data);
+        }
+
+        public IActionResult EditVacancy(int id)
+        {
+            var vacancy = _context.Vacancies.Find(id);
+            if (vacancy == null) return NotFound();
+
+            ViewBag.Departments = new SelectList(
+                _context.Departments.ToList(),
+                "DepartmentId",
+                "DepartmentName",
+                vacancy.DepartmentId
+            );
+
+            return View(vacancy);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult EditVacancy(Vacancy model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            _context.Vacancies.Update(model);
+            _context.SaveChanges();
+
+            TempData["Success"] = "Vacancy updated successfully!";
+            return RedirectToAction("Vacancies");
+        }
+
+        public IActionResult DeleteVacancy(int id)
+        {
+            var vacancy = _context.Vacancies.Find(id);
+            if (vacancy == null) return NotFound();
+
+            _context.Vacancies.Remove(vacancy);
+            _context.SaveChanges();
+
+            TempData["Success"] = "Vacancy deleted!";
+            return RedirectToAction("Vacancies");
+        }
+
+        public IActionResult Departments()
+        {
+            var data = _context.Departments.ToList();
+            return View(data);
+        }
+
+        public IActionResult AddDepartment()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddDepartment(Department model)
+        {
+            _context.Departments.Add(model);
+            _context.SaveChanges();
+            return RedirectToAction("Departments");
+        }
+
+        public IActionResult EditDepartment(int id)
+        {
+            var dept = _context.Departments.Find(id);
+            return View(dept);
+        }
+
+        [HttpPost]
+        public IActionResult EditDepartment(Department model)
+        {
+            _context.Departments.Update(model);
+            _context.SaveChanges();
+            return RedirectToAction("Departments");
+        }
+
+        public IActionResult DeleteDepartment(int id)
+        {
+            bool inUse = _context.Vacancies.Any(v => v.DepartmentId == id);
+
+            if (inUse)
+            {
+                TempData["Error"] = "Cannot delete department. Vacancies exist.";
+                return RedirectToAction("Departments");
+            }
+
+            var dept = _context.Departments.Find(id);
+            _context.Departments.Remove(dept);
+            _context.SaveChanges();
+
+            return RedirectToAction("Departments");
+        }
+
+
+
+
     }
 
 
