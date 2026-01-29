@@ -59,7 +59,7 @@ namespace Admin.Controllers
 
             return View(vm);
         }
-        
+
         public IActionResult Users()
         {
             var applicants = _context.Applicants
@@ -85,32 +85,32 @@ namespace Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult AddVacancy(Vacancy model, IFormFile ImagePath)
         {
-           
-                // Handle image upload
-                if (ImagePath != null && ImagePath.Length > 0)
+
+            // Handle image upload
+            if (ImagePath != null && ImagePath.Length > 0)
+            {
+                var fileName = Path.GetFileName(ImagePath.FileName);
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/vacancies", fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
                 {
-                    var fileName = Path.GetFileName(ImagePath.FileName);
-                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/vacancies", fileName);
-
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        ImagePath.CopyTo(stream);
-                    }
-
-                    model.ImagePath = fileName; // save filename in DB
+                    ImagePath.CopyTo(stream);
                 }
 
-                model.Status = "Open";
-                model.CreatedDate = DateTime.Now;
-                model.FilledOpenings = 0;
-                model.CreatedByEmployeeId = 1; // replace with logged-in employee ID
+                model.ImagePath = fileName; // save filename in DB
+            }
 
-                _context.Vacancies.Add(model);
-                _context.SaveChanges();
+            model.Status = "Open";
+            model.CreatedDate = DateTime.Now;
+            model.FilledOpenings = 0;
+            model.CreatedByEmployeeId = 1; // replace with logged-in employee ID
 
-                TempData["Success"] = "Vacancy added successfully!";
-                return RedirectToAction("Index","Admin");
-            
+            _context.Vacancies.Add(model);
+            _context.SaveChanges();
+
+            TempData["Success"] = "Vacancy added successfully!";
+            return RedirectToAction("Index", "Admin");
+
 
             // Reload departments if validation fails
             var departments = _context.Departments.OrderBy(d => d.DepartmentName).ToList();
@@ -127,6 +127,7 @@ namespace Admin.Controllers
                         select new HRApplicationVM
                         {
                             ApplicantVacancyId = av.ApplicantVacancyId,
+                            ApplicantId = av.ApplicantId,
                             ApplicantName = a.FullName,
                             JobTitle = v.Title,
                             AppliedDate = av.AppliedDate,
@@ -240,6 +241,7 @@ namespace Admin.Controllers
             return View(complaints);
         }
 
+
         [HttpPost]
         public IActionResult DeleteComplaint(int id)
         {
@@ -251,7 +253,83 @@ namespace Admin.Controllers
             }
             return RedirectToAction("ComplaintsList");
         }
-    }
+    
 
+    public IActionResult Details(int id)
+        {
+            // Get the applicant with all related data
+            var applicant = _context.Applicants
+                .Include(a => a.User)
+                .FirstOrDefault(a => a.ApplicantId == id);
 
+            if (applicant == null)
+            {
+                return NotFound();
+            }
+
+            // Get all applications for this applicant
+            var allApplications = _context.ApplicantVacancies
+                .Include(av => av.Vacancy)
+                    .ThenInclude(v => v.Department)
+                .Where(av => av.ApplicantId == applicant.ApplicantId)
+                .OrderByDescending(av => av.AppliedDate)
+                .Select(av => new ApplicantApplicationVM
+                {
+                    JobTitle = av.Vacancy.Title,
+                    DepartmentName = av.Vacancy.Department.DepartmentName,
+                    AppliedDate = av.AppliedDate,
+                    Status = av.Status
+                })
+                .ToList();
+
+            // Get all interviews for this applicant
+            var allInterviews = (from i in _context.Interviews
+                                 join av in _context.ApplicantVacancies
+                                     on i.ApplicantVacancyId equals av.ApplicantVacancyId
+                                 join e in _context.Employees
+                                     on i.InterviewerEmployeeId equals e.EmployeeId
+                                 join v in _context.Vacancies
+                                     on av.VacancyId equals v.VacancyId
+                                 where av.ApplicantId == applicant.ApplicantId
+                                 orderby i.InterviewDate descending
+                                 select new ApplicantInterviewVM
+                                 {
+                                     InterviewId = i.InterviewId,
+                                     JobTitle = v.Title,
+                                     InterviewerName = e.FullName,
+                                     InterviewDate = i.InterviewDate.ToDateTime(TimeOnly.MinValue),
+                                     StartTime = i.StartTime.ToTimeSpan(),
+                                     EndTime = i.EndTime.ToTimeSpan(),
+                                     Result = i.Result
+                                 })
+                                 .ToList();
+
+            // Create the view model
+            var profileVM = new HRApplicantProfileVM
+            {
+                ApplicantId = applicant.ApplicantId,
+                FullName = applicant.FullName,
+                Email = applicant.User?.Email ?? "N/A",
+                UserId = applicant.UserId,
+                Status = applicant.Status,
+                CreatedDate = applicant.CreatedDate,
+
+                // Statistics
+                TotalApplications = allApplications.Count,
+                TotalInterviews = allInterviews.Count,
+                PendingApplications = allApplications.Count(a => a.Status == "Applied"),
+                SelectedApplications = allApplications.Count(a => a.Status == "Selected"),
+                RejectedApplications = allApplications.Count(a => a.Status == "Rejected"),
+
+                // All Applications
+                Applications = allApplications,
+
+                // All Interviews
+                Interviews = allInterviews
+            };
+
+            return View(profileVM);
+        }
+
+    } 
 }

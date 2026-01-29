@@ -1,0 +1,418 @@
+﻿@model HR_Recruitment.Models.ApplicantProfileVM
+@{
+    Layout = "~/views/Shared/_InterviewerLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #F2F2F2;
+        }
+
+        .my-apps-container {
+            margin-left: 300px;
+            padding: 30px;
+            background-color: #F2F2F2;
+            min-height: 100vh;
+        }
+
+        .my-apps-page-header {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .my-apps-page-header h2 {
+                font-size: 32px;
+                font-weight: 600;
+                color: #333;
+                margin: 0 0 8px 0;
+            }
+
+            .my-apps-page-header p {
+                font-size: 16px;
+                color: #666;
+                margin: 0;
+            }
+
+        .btn-back {
+            padding: 10px 20px;
+            background-color: #6C757D;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+            .btn-back:hover {
+                background-color: #5A6268;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+                color: white;
+                text-decoration: none;
+            }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+        }
+
+            .profile-card.full-width {
+                grid-column: 1 / -1;
+            }
+
+        .card-header {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #F2F2F2;
+        }
+
+            .card-header h3 {
+                font-size: 20px;
+                font-weight: 600;
+                color: #333;
+                margin: 0;
+            }
+
+        .info-row {
+            display: flex;
+            padding: 12px 0;
+            border-bottom: 1px solid #F8F9FA;
+        }
+
+            .info-row:last-child {
+                border-bottom: none;
+            }
+
+        .info-label {
+            font-weight: 600;
+            color: #666;
+            width: 180px;
+            flex-shrink: 0;
+            font-size: 14px;
+        }
+
+        .info-value {
+            color: #333;
+            flex: 1;
+            font-size: 14px;
+        }
+
+        .my-apps-status-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .status-applied,
+        .status-pending {
+            background-color: #FFF3CD;
+            color: #856404;
+        }
+
+        .status-selected,
+        .status-approved {
+            background-color: #D4EDDA;
+            color: #155724;
+        }
+
+        .status-rejected {
+            background-color: #F8D7DA;
+            color: #721C24;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            padding: 25px;
+            color: white;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .my-apps-table-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .my-apps-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+            .my-apps-table thead {
+                background-color: #F2F2F2;
+            }
+
+                .my-apps-table thead th {
+                    padding: 16px 25px;
+                    text-align: left;
+                    font-weight: 600;
+                    font-size: 14px;
+                    color: #666;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                }
+
+            .my-apps-table tbody tr {
+                border-bottom: 1px solid #F2F2F2;
+                transition: background-color 0.2s ease;
+            }
+
+                .my-apps-table tbody tr:hover {
+                    background-color: #FFF5F9;
+                }
+
+                .my-apps-table tbody tr:last-child {
+                    border-bottom: none;
+                }
+
+            .my-apps-table tbody td {
+                padding: 18px 25px;
+                font-size: 15px;
+                color: #333;
+                vertical-align: middle;
+            }
+
+        .my-apps-job-title {
+            font-weight: 500;
+            color: #222;
+        }
+
+        .empty-state-cell {
+            text-align: center;
+            padding: 60px 20px !important;
+            color: #999;
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            color: #DDD;
+            margin-bottom: 15px;
+        }
+
+        .empty-state-text {
+            font-size: 16px;
+            color: #999;
+        }
+
+        .current-application-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="my-apps-container">
+        <div class="my-apps-page-header">
+            <div>
+                <h2>@Model.FullName</h2>
+                <p>Applicant Profile & Application History</p>
+            </div>
+            <a asp-action="ScheduledInterviews" asp-controller="Interviewer" class="btn-back">
+                ← Back to Interviews
+            </a>
+        </div>
+
+        <div class="profile-grid">
+            <!-- Basic Information -->
+            <div class="profile-card">
+                <div class="card-header">
+                    <h3>📋 Applicant Information</h3>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Full Name:</span>
+                    <span class="info-value">@Model.FullName</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Email:</span>
+                    <span class="info-value">@Model.Email</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Registered On:</span>
+                    <span class="info-value">@Model.CreatedDate.ToString("dd MMM yyyy")</span>
+                </div>
+            </div>
+
+            <!-- Current Application & Statistics -->
+            <div class="profile-card">
+                <div class="card-header">
+                    <h3>📌 Current Application</h3>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Job Position:</span>
+                    <span class="info-value">@Model.CurrentJobTitle</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Department:</span>
+                    <span class="info-value">@Model.CurrentDepartment</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Applied Date:</span>
+                    <span class="info-value">@Model.CurrentAppliedDate.ToString("dd MMM yyyy")</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Status:</span>
+                    <span class="info-value">
+                        @{
+                            var statusClass = "my-apps-status-badge ";
+                            var statusLower = Model.CurrentApplicationStatus?.ToLower() ?? "";
+
+                            if (statusLower.Contains("select") || statusLower.Contains("approve"))
+                            {
+                                statusClass += "status-selected";
+                            }
+                            else if (statusLower.Contains("reject"))
+                            {
+                                statusClass += "status-rejected";
+                            }
+                            else if (statusLower.Contains("applied"))
+                            {
+                                statusClass += "status-applied";
+                            }
+                            else
+                            {
+                                statusClass += "status-pending";
+                            }
+                        }
+                        <span class="@statusClass">@Model.CurrentApplicationStatus</span>
+                    </span>
+                </div>
+
+                <!-- Statistics Card -->
+                <div style="margin-top: 30px;">
+                    <div class="stat-card">
+                        <div class="stat-number">@Model.TotalApplications</div>
+                        <div class="stat-label">Total Applications Submitted</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application History -->
+            <div class="profile-card full-width">
+                <div class="card-header">
+                    <h3>📜 Application History</h3>
+                </div>
+
+                <div class="my-apps-table-container">
+                    @if (Model.Applications != null && Model.Applications.Any())
+                    {
+                        <table class="my-apps-table">
+                            <thead>
+                                <tr>
+                                    <th>Job Position</th>
+                                    <th>Department</th>
+                                    <th>Applied Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var app in Model.Applications)
+                                {
+                                    <tr>
+                                        <td class="my-apps-job-title" data-label="Job Position">
+                                            @app.JobTitle
+                                            @if (app.JobTitle == Model.CurrentJobTitle &&
+                                                                                app.AppliedDate == Model.CurrentAppliedDate)
+                                            {
+                                                <span class="current-application-badge">CURRENT</span>
+                                            }
+                                        </td>
+                                        <td data-label="Department">
+                                            @app.DepartmentName
+                                        </td>
+                                        <td data-label="Applied Date">
+                                            @app.AppliedDate.ToString("dd MMM yyyy")
+                                        </td>
+                                        <td data-label="Status">
+                                            @{
+                                                var appStatusClass = "my-apps-status-badge ";
+                                                var appStatusLower = app.Status?.ToLower() ?? "";
+
+                                                if (appStatusLower.Contains("select") || appStatusLower.Contains("approve"))
+                                                {
+                                                    appStatusClass += "status-selected";
+                                                }
+                                                else if (appStatusLower.Contains("reject"))
+                                                {
+                                                    appStatusClass += "status-rejected";
+                                                }
+                                                else if (appStatusLower.Contains("applied"))
+                                                {
+                                                    appStatusClass += "status-applied";
+                                                }
+                                                else
+                                                {
+                                                    appStatusClass += "status-pending";
+                                                }
+                                            }
+                                            <span class="@appStatusClass">@app.Status</span>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <div class="empty-state-cell">
+                            <div class="empty-state-icon">📋</div>
+                            <div class="empty-state-text">No application history found.</div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

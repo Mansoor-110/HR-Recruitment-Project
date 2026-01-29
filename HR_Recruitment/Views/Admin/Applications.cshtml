@@ -51,7 +51,7 @@
     }
 
         .my-apps-table thead {
-            background-color: #F2F2F2;
+            background-color: #F8F9FA;
         }
 
             .my-apps-table thead th {
@@ -81,6 +81,7 @@
             padding: 18px 25px;
             font-size: 15px;
             color: #333;
+            vertical-align: middle;
         }
 
     .applicant-cell {
@@ -127,6 +128,12 @@
         color: #0C5460;
     }
 
+    .action-buttons {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
     .btn-schedule {
         background-color: #F22771;
         color: white;
@@ -154,6 +161,33 @@
             transform: translateY(0);
         }
 
+    .btn-details {
+        background-color: #6C757D;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 6px rgba(108, 117, 125, 0.2);
+    }
+
+        .btn-details:hover {
+            background-color: #5A6268;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn-details:active {
+            transform: translateY(0);
+        }
+
     .empty-state {
         text-align: center;
         padding: 60px 20px;
@@ -171,33 +205,8 @@
             margin: 0;
         }
 
-    .my-apps-table thead {
-        display: none;
-    }
-
-    .my-apps-table tbody tr {
-        display: block;
-        margin-bottom: 15px;
-        border: 1px solid #F2F2F2;
-        border-radius: 8px;
-        padding: 15px;
-    }
-
-    .my-apps-table tbody td {
-        display: block;
-        padding: 8px 0;
-        border: none;
-    }
-
-        .my-apps-table tbody td:before {
-            content: attr(data-label);
-            font-weight: 600;
-            color: #666;
-            display: inline-block;
-            width: 120px;
-        }
-
-    }
+    /* Responsive Design */
+  
 </style>
 
 <div class="applications-container">
@@ -219,22 +228,29 @@
                         <th>Job Position</th>
                         <th>Applied Date</th>
                         <th>Status</th>
-                        <th>Action</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td class="applicant-cell" data-label="Applicant">@item.ApplicantName</td>
-                            <td class="job-cell" data-label="Job Position">@item.JobTitle</td>
-                            <td class="date-cell" data-label="Applied Date">@item.AppliedDate.ToShortDateString()</td>
+                            <td class="applicant-cell" data-label="Applicant">
+                                @item.ApplicantName
+                            </td>
+                            <td class="job-cell" data-label="Job Position">
+                                @item.JobTitle
+                            </td>
+                            <td class="date-cell" data-label="Applied Date">
+                                @item.AppliedDate.ToString("MMM dd, yyyy")
+                            </td>
                             <td data-label="Status">
                                 @{
                                     var statusClass = "status-pending";
                                     switch (item.Status?.ToLower())
                                     {
                                         case "approved":
+                                        case "selected":
                                             statusClass = "status-approved";
                                             break;
                                         case "rejected":
@@ -251,12 +267,20 @@
                                 }
                                 <span class="status-badge @statusClass">@item.Status</span>
                             </td>
-                            <td data-label="Action">
-                                <a asp-action="ScheduleInterview"
-                                   asp-route-id="@item.ApplicantVacancyId"
-                                   class="btn-schedule">
-                                    Schedule Interview
-                                </a>
+                            <td data-label="Actions">
+                                <div class="action-buttons">
+                                    <a asp-action="Details"
+                                       asp-route-id="@item.ApplicantId"
+                                       asp-route-returnUrl="Applications"
+                                       class="btn-details">
+                                        View Details
+                                    </a>
+                                    <a asp-action="ScheduleInterview"
+                                       asp-route-id="@item.ApplicantVacancyId"
+                                       class="btn-schedule">
+                                        Schedule Interview
+                                    </a>
+                                </div>
                             </td>
                         </tr>
                     }

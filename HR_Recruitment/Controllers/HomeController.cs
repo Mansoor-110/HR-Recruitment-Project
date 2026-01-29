@@ -18,34 +18,75 @@ namespace HR_Recruitment.Controllers
 
         public IActionResult Index()
         {
-          
+            var featuredJobs = _context.Vacancies
+                .Include(v => v.Department)
+                .Where(v => v.Status == "Open")
+                .OrderByDescending(v => v.CreatedDate)
+                .Take(5)
+                .Select(v => new VacancyDepartmentVM
+                {
+                    VacancyId = v.VacancyId,
+                    Title = v.Title,
+                    CreatedDate = v.CreatedDate,
+                    ImagePath = v.ImagePath,
+                    DepartmentName = v.Department.DepartmentName
+                })
+                .ToList();
 
-            return View();
+            return View(featuredJobs);
         }
-        public IActionResult FindJob()
+
+        public IActionResult FindJob(
+       string? keyword,
+       int? departmentId,
+       string? status
+   )
         {
-            var data = _context.Vacancies
-           .Include(v => v.Department)
-           .Select(v => new VacancyDepartmentVM
-           {
-               VacancyId = v.VacancyId,
-               Title = v.Title,
-               Description = v.Description,
-               TotalOpenings = v.TotalOpenings,
-               FilledOpenings = v.FilledOpenings,
-               Status = v.Status,
-               CreatedDate = v.CreatedDate,
-               CloseDate = v.CloseDate,
-               ImagePath = v.ImagePath,
+            var query = _context.Vacancies
+                .Include(v => v.Department)
+                .AsQueryable();
 
-               DepartmentId = v.Department.DepartmentId,
-               DepartmentName = v.Department.DepartmentName
-           })
-           .ToList();
+            // 🔍 Keyword filter
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                query = query.Where(v =>
+                    v.Title.Contains(keyword) ||
+                    v.Description.Contains(keyword)
+                );
+            }
 
-            return View(data);
+            // 🏢 Department filter
+            if (departmentId != null)
+            {
+                query = query.Where(v => v.DepartmentId == departmentId);
+            }
 
+            // 📌 Status filter
+            if (!string.IsNullOrEmpty(status))
+            {
+                query = query.Where(v => v.Status == status);
+            }
+
+            var jobs = query
+                .OrderByDescending(v => v.CreatedDate)
+                .Select(v => new VacancyDepartmentVM
+                {
+                    VacancyId = v.VacancyId,
+                    Title = v.Title,
+                    Description = v.Description,
+                    CreatedDate = v.CreatedDate,
+                    CloseDate = v.CloseDate,
+                    Status = v.Status,
+                    ImagePath = v.ImagePath,
+                    DepartmentName = v.Department.DepartmentName
+                })
+                .ToList();
+
+            ViewBag.Departments = _context.Departments.ToList();
+
+            return View(jobs);
         }
+
         public IActionResult JobDetails(int id)
         {
             var job = _context.Vacancies
