@@ -235,7 +235,7 @@ namespace Admin.Controllers
                 return NotFound();
 
             // ✅ Final status
-            app.Status = "Confirmed";
+            app.Status = "Hired";
             _context.SaveChanges();
 
             // 🔹 Get user email
@@ -350,10 +350,14 @@ on your skills or experience.</p>
             return View(data);
         }
 
+        // =============================
+        // EDIT VACANCY (GET)
+        // =============================
         public IActionResult EditVacancy(int id)
         {
             var vacancy = _context.Vacancies.Find(id);
-            if (vacancy == null) return NotFound();
+            if (vacancy == null)
+                return NotFound();
 
             ViewBag.Departments = new SelectList(
                 _context.Departments.ToList(),
@@ -365,31 +369,57 @@ on your skills or experience.</p>
             return View(vacancy);
         }
 
+        // =============================
+        // EDIT VACANCY (POST)
+        // =============================
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult EditVacancy(Vacancy model)
         {
             if (!ModelState.IsValid)
-                return View(model);
+            {
+                ViewBag.Departments = new SelectList(
+                    _context.Departments.ToList(),
+                    "DepartmentId",
+                    "DepartmentName",
+                    model.DepartmentId
+                );
 
-            _context.Vacancies.Update(model);
+                return View(model);
+            }
+
+            var vacancy = _context.Vacancies.Find(model.VacancyId);
+            if (vacancy == null)
+                return NotFound();
+
+            // ✅ UPDATE FIELDS
+            vacancy.Title = model.Title;
+            vacancy.DepartmentId = model.DepartmentId;
+            vacancy.TotalOpenings = model.TotalOpenings;
+            vacancy.Status = model.Status;
+
             _context.SaveChanges();
 
             TempData["Success"] = "Vacancy updated successfully!";
             return RedirectToAction("Vacancies");
         }
 
+        // =============================
+        // DELETE VACANCY
+        // =============================
         public IActionResult DeleteVacancy(int id)
         {
             var vacancy = _context.Vacancies.Find(id);
-            if (vacancy == null) return NotFound();
+            if (vacancy == null)
+                return NotFound();
 
             _context.Vacancies.Remove(vacancy);
             _context.SaveChanges();
 
-            TempData["Success"] = "Vacancy deleted!";
+            TempData["Success"] = "Vacancy deleted successfully!";
             return RedirectToAction("Vacancies");
         }
+
 
         public IActionResult Departments()
         {

@@ -1,4 +1,4 @@
-﻿@{
+@{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 @model List<HR_Recruitment.Models.Complaint>
@@ -13,7 +13,7 @@
     .complaints-container {
         padding: 40px;
         margin-left: 300px;
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        background: #F2F2F2;
         min-height: 100vh;
     }
 
@@ -21,7 +21,6 @@
         margin-bottom: 35px;
         animation: slideDown 0.5s ease-out;
     }
-
 
     .page-header h1 {
         font-size: 36px;
@@ -41,23 +40,22 @@
         border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
-
     .table-header {
         padding: 25px 30px;
-        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        background: linear-gradient(135deg, #FB246A 0%, #D91F5E 100%);
         border-bottom: none;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-        .table-header h2 {
-            font-size: 22px;
-            font-weight: 600;
-            color: white;
-            margin: 0;
-            letter-spacing: 0.3px;
-        }
+    .table-header h2 {
+        font-size: 22px;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+        letter-spacing: 0.3px;
+    }
 
     .complaints-table {
         width: 100%;
@@ -65,88 +63,79 @@
         background: white;
     }
 
-        .complaints-table thead {
-            background: linear-gradient(to right, #f8f9fa, #e9ecef);
-            border-bottom: 3px solid #e74c3c;
-        }
+    .complaints-table thead {
+        background: linear-gradient(to right, #f8f9fa, #e9ecef);
+        border-bottom: 3px solid #FB246A;
+    }
 
-            .complaints-table thead th {
-                padding: 18px 30px;
-                text-align: left;
-                font-weight: 700;
-                font-size: 13px;
-                color: #495057;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-            }
+    .complaints-table thead th {
+        padding: 18px 25px;
+        text-align: left;
+        font-weight: 700;
+        font-size: 13px;
+        color: #495057;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
 
-        .complaints-table tbody tr {
-            border-bottom: 1px solid #e9ecef;
-            transition: all 0.3s ease;
-            position: relative;
-        }
+    .complaints-table tbody tr {
+        border-bottom: 1px solid #e9ecef;
+        transition: all 0.3s ease;
+        position: relative;
+    }
 
-            .complaints-table tbody tr::before {
-                position: absolute;
-                top: 0;
-                height: 100%;
-                width: 4px;
-                background: #e74c3c;
-                transform: scaleY(0);
-                transition: transform 0.3s ease;
-            }
 
-            .complaints-table tbody tr:hover {
-                background: linear-gradient(to right, #fff5f5, #ffffff);
-                box-shadow: 0 4px 15px rgba(231, 76, 60, 0.1);
-                transform: translateX(5px);
-            }
+    .complaints-table tbody tr:hover {
+        background: linear-gradient(to right, #fff5f9, #ffffff);
+        box-shadow: 0 4px 15px rgba(251, 36, 106, 0.1);
+        transform: translateX(5px);
+    }
 
-                .complaints-table tbody tr:hover::before {
-                    transform: scaleY(1);
-                }
+    .complaints-table tbody tr:hover::before {
+        transform: scaleY(1);
+    }
 
-            .complaints-table tbody tr:last-child {
-                border-bottom: none;
-            }
+    .complaints-table tbody tr:last-child {
+        border-bottom: none;
+    }
 
-        .complaints-table tbody td {
-            padding: 20px 30px;
-            font-size: 15px;
-            color: #2C3E50;
-            vertical-align: middle;
-        }
+    .complaints-table tbody td {
+        padding: 20px 25px;
+        font-size: 15px;
+        color: #2C3E50;
+        vertical-align: middle;
+    }
 
-            .complaints-table tbody td:nth-child(1) {
-                font-weight: 600;
-                color: #2C3E50;
-                font-size: 16px;
-            }
+    .complaints-table tbody td:nth-child(1) {
+        font-weight: 600;
+        color: #2C3E50;
+        font-size: 16px;
+    }
 
-            .complaints-table tbody td:nth-child(2) {
-                color: #5a6c7d;
-            }
+    .complaints-table tbody td:nth-child(2) {
+        color: #5a6c7d;
+    }
 
-            .complaints-table tbody td:nth-child(3) {
-                font-weight: 500;
-                color: #34495e;
-            }
+    .complaints-table tbody td:nth-child(3) {
+        font-weight: 500;
+        color: #34495e;
+    }
 
-            .complaints-table tbody td:nth-child(4) {
-                color: #7f8c8d;
-                max-width: 300px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
+    .complaints-table tbody td:nth-child(4) {
+        color: #7f8c8d;
+        max-width: 300px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
-            .complaints-table tbody td:nth-child(5) {
-                color: #95a5a6;
-                font-size: 14px;
-                font-weight: 500;
-            }
+    .complaints-table tbody td:nth-child(5) {
+        color: #95a5a6;
+        font-size: 14px;
+        font-weight: 500;
+    }
 
     .btn-delete {
-        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        background: linear-gradient(135deg, #FB246A 0%, #D91F5E 100%);
         color: white;
         padding: 10px 20px;
         border: none;
@@ -157,42 +146,42 @@
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         text-decoration: none;
         display: inline-block;
-        box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        box-shadow: 0 4px 15px rgba(251, 36, 106, 0.3);
         letter-spacing: 0.3px;
         position: relative;
         overflow: hidden;
     }
 
-        .btn-delete::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
+    .btn-delete::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
 
-        .btn-delete:hover::before {
-            width: 300px;
-            height: 300px;
-        }
+    .btn-delete:hover::before {
+        width: 300px;
+        height: 300px;
+    }
 
-        .btn-delete:hover {
-            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
-            color: white;
-            text-decoration: none;
-        }
+    .btn-delete:hover {
+        background: linear-gradient(135deg, #D91F5E 0%, #B01848 100%);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(251, 36, 106, 0.4);
+        color: white;
+        text-decoration: none;
+    }
 
-        .btn-delete:active {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
-        }
+    .btn-delete:active {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 15px rgba(251, 36, 106, 0.3);
+    }
 
     .empty-state {
         text-align: center;
@@ -201,14 +190,12 @@
         animation: fadeIn 0.6s ease-out;
     }
 
-
     .empty-state i {
         font-size: 80px;
         color: #dfe6e9;
         margin-bottom: 25px;
         animation: float 3s ease-in-out infinite;
     }
-
 
     .empty-state p {
         font-size: 20px;

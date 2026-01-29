@@ -1,4 +1,4 @@
-﻿@model List<HR_Recruitment.Models.FinalDecisionVM>
+@model List<HR_Recruitment.Models.FinalDecisionVM>
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
@@ -13,7 +13,7 @@
     .final-decision-container {
         padding: 40px;
         margin-left: 300px;
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        background: #F2F2F2;
         min-height: 100vh;
     }
 
@@ -49,29 +49,29 @@
 
     .table-header {
         padding: 25px 30px;
-        background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+        background: linear-gradient(135deg, #FB246A 0%, #D91F5E 100%);
         border-bottom: none;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-        .table-header h2 {
-            font-size: 22px;
-            font-weight: 600;
-            color: white;
-            margin: 0;
-            letter-spacing: 0.3px;
-        }
+    .table-header h2 {
+        font-size: 22px;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+        letter-spacing: 0.3px;
+    }
 
-        .table-header .candidate-count {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            color: white;
-        }
+    .table-header .candidate-count {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+    }
 
     .decision-table {
         width: 100%;
@@ -79,59 +79,47 @@
         background: white;
     }
 
-        .decision-table thead {
-            background: linear-gradient(to right, #f8f9fa, #e9ecef);
-            border-bottom: 3px solid #27ae60;
-        }
+    .decision-table thead {
+        background: linear-gradient(to right, #f8f9fa, #e9ecef);
+        border-bottom: 3px solid #FB246A;
+    }
 
-            .decision-table thead th {
-                padding: 18px 30px;
-                text-align: left;
-                font-weight: 700;
-                font-size: 13px;
-                color: #495057;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-            }
+    .decision-table thead th {
+        padding: 18px 25px;
+        text-align: left;
+        font-weight: 700;
+        font-size: 13px;
+        color: #495057;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
 
-        .decision-table tbody tr {
-            border-bottom: 1px solid #e9ecef;
-            transition: all 0.3s ease;
-            position: relative;
-        }
+    .decision-table tbody tr {
+        border-bottom: 1px solid #e9ecef;
+        transition: all 0.3s ease;
+        position: relative;
+    }
 
-            .decision-table tbody tr::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                height: 100%;
-                width: 4px;
-                background: #27ae60;
-                transform: scaleY(0);
-                transition: transform 0.3s ease;
-            }
+    .decision-table tbody tr:hover {
+        background: linear-gradient(to right, #fff5f9, #ffffff);
+        box-shadow: 0 4px 15px rgba(251, 36, 106, 0.1);
+        transform: translateX(5px);
+    }
 
-            .decision-table tbody tr:hover {
-                background: linear-gradient(to right, #f0fff4, #ffffff);
-                box-shadow: 0 4px 15px rgba(39, 174, 96, 0.1);
-                transform: translateX(5px);
-            }
+    .decision-table tbody tr:hover::before {
+        transform: scaleY(1);
+    }
 
-                .decision-table tbody tr:hover::before {
-                    transform: scaleY(1);
-                }
+    .decision-table tbody tr:last-child {
+        border-bottom: none;
+    }
 
-            .decision-table tbody tr:last-child {
-                border-bottom: none;
-            }
-
-        .decision-table tbody td {
-            padding: 20px 30px;
-            font-size: 15px;
-            color: #2C3E50;
-            vertical-align: middle;
-        }
+    .decision-table tbody td {
+        padding: 20px 25px;
+        font-size: 15px;
+        color: #2C3E50;
+        vertical-align: middle;
+    }
 
     .applicant-cell {
         font-weight: 600;
@@ -157,7 +145,7 @@
         font-size: 13px;
         font-weight: 600;
         text-align: center;
-        min-width: 120px;
+        min-width: 100px;
         text-transform: capitalize;
         letter-spacing: 0.3px;
         background: linear-gradient(135deg, #55efc4 0%, #00b894 100%);
@@ -166,10 +154,10 @@
         transition: all 0.3s ease;
     }
 
-        .status-badge:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 184, 148, 0.4);
-        }
+    .status-badge:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 184, 148, 0.4);
+    }
 
     .action-buttons {
         display: flex;
@@ -195,37 +183,37 @@
         overflow: hidden;
     }
 
-        .btn-approve::before {
-            content: '✓';
-            position: absolute;
-            left: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 16px;
-            font-weight: bold;
-            transition: left 0.3s ease;
-        }
+    .btn-approve::before {
+        content: '✓';
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        font-weight: bold;
+        transition: left 0.3s ease;
+    }
 
-        .btn-approve:hover::before {
-            left: 8px;
-        }
+    .btn-approve:hover::before {
+        left: 8px;
+    }
 
-        .btn-approve:hover {
-            background: linear-gradient(135deg, #229954 0%, #1e8449 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
-            color: white;
-            text-decoration: none;
-            padding-left: 28px;
-        }
+    .btn-approve:hover {
+        background: linear-gradient(135deg, #229954 0%, #1e8449 100%);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
+        color: white;
+        text-decoration: none;
+        padding-left: 28px;
+    }
 
-        .btn-approve:active {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
-        }
+    .btn-approve:active {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+    }
 
     .btn-reject {
-        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        background: linear-gradient(135deg, #FB246A 0%, #D91F5E 100%);
         color: white;
         padding: 10px 20px;
         border: none;
@@ -236,40 +224,40 @@
         text-decoration: none;
         display: inline-block;
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        box-shadow: 0 4px 15px rgba(251, 36, 106, 0.3);
         letter-spacing: 0.3px;
         position: relative;
         overflow: hidden;
     }
 
-        .btn-reject::before {
-            content: '✕';
-            position: absolute;
-            left: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 16px;
-            font-weight: bold;
-            transition: left 0.3s ease;
-        }
+    .btn-reject::before {
+        content: '✕';
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        font-weight: bold;
+        transition: left 0.3s ease;
+    }
 
-        .btn-reject:hover::before {
-            left: 8px;
-        }
+    .btn-reject:hover::before {
+        left: 8px;
+    }
 
-        .btn-reject:hover {
-            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
-            color: white;
-            text-decoration: none;
-            padding-left: 28px;
-        }
+    .btn-reject:hover {
+        background: linear-gradient(135deg, #D91F5E 0%, #B01848 100%);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(251, 36, 106, 0.4);
+        color: white;
+        text-decoration: none;
+        padding-left: 28px;
+    }
 
-        .btn-reject:active {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
-        }
+    .btn-reject:active {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 15px rgba(251, 36, 106, 0.3);
+    }
 
     .empty-state {
         text-align: center;
@@ -298,12 +286,11 @@
         margin-top: 10px;
     }
 
-   
 </style>
 
 <div class="final-decision-container">
     <div class="page-header">
-        <h1>Final Approval</h1>
+        <h1>✅ Final Approval</h1>
         <p class="page-subtitle">Review and approve selected candidates for final hiring decision</p>
     </div>
 
