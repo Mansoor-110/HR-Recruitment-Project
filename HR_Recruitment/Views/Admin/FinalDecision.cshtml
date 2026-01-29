@@ -1,0 +1,358 @@
+@model List<HR_Recruitment.Models.FinalDecisionVM>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .final-decision-container {
+        padding: 40px;
+        margin-left: 300px;
+        background: #F2F2F2;
+        min-height: 100vh;
+    }
+
+    .page-header {
+        margin-bottom: 35px;
+        animation: slideDown 0.5s ease-out;
+    }
+
+    .page-header h1 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #2C3E50;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        letter-spacing: -0.5px;
+    }
+
+    .page-subtitle {
+        font-size: 16px;
+        color: #7f8c8d;
+        margin-top: 8px;
+        font-weight: 400;
+    }
+
+    .table-card {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+        animation: fadeInUp 0.6s ease-out;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .table-header {
+        padding: 25px 30px;
+        background: linear-gradient(135deg, #FB246A 0%, #D91F5E 100%);
+        border-bottom: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .table-header h2 {
+        font-size: 22px;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+        letter-spacing: 0.3px;
+    }
+
+    .table-header .candidate-count {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+    }
+
+    .decision-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+    }
+
+    .decision-table thead {
+        background: linear-gradient(to right, #f8f9fa, #e9ecef);
+        border-bottom: 3px solid #FB246A;
+    }
+
+    .decision-table thead th {
+        padding: 18px 25px;
+        text-align: left;
+        font-weight: 700;
+        font-size: 13px;
+        color: #495057;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .decision-table tbody tr {
+        border-bottom: 1px solid #e9ecef;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .decision-table tbody tr:hover {
+        background: linear-gradient(to right, #fff5f9, #ffffff);
+        box-shadow: 0 4px 15px rgba(251, 36, 106, 0.1);
+        transform: translateX(5px);
+    }
+
+    .decision-table tbody tr:hover::before {
+        transform: scaleY(1);
+    }
+
+    .decision-table tbody tr:last-child {
+        border-bottom: none;
+    }
+
+    .decision-table tbody td {
+        padding: 20px 25px;
+        font-size: 15px;
+        color: #2C3E50;
+        vertical-align: middle;
+    }
+
+    .applicant-cell {
+        font-weight: 600;
+        color: #2C3E50;
+        font-size: 16px;
+    }
+
+    .job-cell {
+        color: #5a6c7d;
+        font-weight: 500;
+    }
+
+    .date-cell {
+        color: #8492a6;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .status-badge {
+        display: inline-block;
+        padding: 8px 18px;
+        border-radius: 25px;
+        font-size: 13px;
+        font-weight: 600;
+        text-align: center;
+        min-width: 100px;
+        text-transform: capitalize;
+        letter-spacing: 0.3px;
+        background: linear-gradient(135deg, #55efc4 0%, #00b894 100%);
+        color: #155724;
+        box-shadow: 0 2px 8px rgba(0, 184, 148, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .status-badge:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 184, 148, 0.4);
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .btn-approve {
+        background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+        letter-spacing: 0.3px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-approve::before {
+        content: '✓';
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        font-weight: bold;
+        transition: left 0.3s ease;
+    }
+
+    .btn-approve:hover::before {
+        left: 8px;
+    }
+
+    .btn-approve:hover {
+        background: linear-gradient(135deg, #229954 0%, #1e8449 100%);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
+        color: white;
+        text-decoration: none;
+        padding-left: 28px;
+    }
+
+    .btn-approve:active {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+    }
+
+    .btn-reject {
+        background: linear-gradient(135deg, #FB246A 0%, #D91F5E 100%);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 4px 15px rgba(251, 36, 106, 0.3);
+        letter-spacing: 0.3px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-reject::before {
+        content: '✕';
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        font-weight: bold;
+        transition: left 0.3s ease;
+    }
+
+    .btn-reject:hover::before {
+        left: 8px;
+    }
+
+    .btn-reject:hover {
+        background: linear-gradient(135deg, #D91F5E 0%, #B01848 100%);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(251, 36, 106, 0.4);
+        color: white;
+        text-decoration: none;
+        padding-left: 28px;
+    }
+
+    .btn-reject:active {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 15px rgba(251, 36, 106, 0.3);
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 80px 20px;
+        color: #95a5a6;
+        animation: fadeIn 0.6s ease-out;
+    }
+
+    .empty-state i {
+        font-size: 80px;
+        color: #dfe6e9;
+        margin-bottom: 25px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .empty-state p {
+        font-size: 20px;
+        margin: 0;
+        font-weight: 500;
+        color: #7f8c8d;
+    }
+
+    .empty-state .empty-subtitle {
+        font-size: 16px;
+        color: #95a5a6;
+        margin-top: 10px;
+    }
+
+</style>
+
+<div class="final-decision-container">
+    <div class="page-header">
+        <h1>✅ Final Approval</h1>
+        <p class="page-subtitle">Review and approve selected candidates for final hiring decision</p>
+    </div>
+
+    <div class="table-card">
+        <div class="table-header">
+            <h2>Selected Candidates</h2>
+            @if (Model != null && Model.Any())
+            {
+                <span class="candidate-count">@Model.Count Candidate@(Model.Count != 1 ? "s" : "")</span>
+            }
+        </div>
+
+        @if (Model != null && Model.Any())
+        {
+            <table class="decision-table">
+                <thead>
+                    <tr>
+                        <th>Applicant</th>
+                        <th>Job Title</th>
+                        <th>Applied Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="applicant-cell" data-label="Applicant">@item.ApplicantName</td>
+                            <td class="job-cell" data-label="Job Title">@item.JobTitle</td>
+                            <td class="date-cell" data-label="Applied Date">@item.AppliedDate.ToShortDateString()</td>
+                            <td data-label="Status">
+                                <span class="status-badge">@item.CurrentStatus</span>
+                            </td>
+                            <td data-label="Action">
+                                <div class="action-buttons">
+                                    <a asp-action="FinalApprove"
+                                       asp-route-id="@item.ApplicantVacancyId"
+                                       class="btn-approve"
+                                       onclick="return confirm('Are you sure you want to approve @item.ApplicantName for final hiring?');">
+                                        Approve
+                                    </a>
+                                    <a asp-action="FinalReject"
+                                       asp-route-id="@item.ApplicantVacancyId"
+                                       class="btn-reject"
+                                       onclick="return confirm('Are you sure you want to reject @item.ApplicantName?');">
+                                        Reject
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div class="empty-state">
+                <i class="fas fa-user-check"></i>
+                <p>No candidates for final approval</p>
+                <p class="empty-subtitle">Selected candidates will appear here for final decision</p>
+            </div>
+        }
+    </div>
+</div>

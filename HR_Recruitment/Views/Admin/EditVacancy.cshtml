@@ -1,0 +1,207 @@
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model HR_Recruitment.Models.Vacancy
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .edit-container {
+        padding: 40px;
+        margin-left: 300px;
+        background: #F2F2F2;
+        min-height: 100vh;
+    }
+
+    .page-header {
+        margin-bottom: 35px;
+        animation: slideDown 0.5s ease-out;
+    }
+
+    .page-header h1 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #2C3E50;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        letter-spacing: -0.5px;
+    }
+
+    .form-card {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        padding: 40px;
+        max-width: 600px;
+        animation: fadeInUp 0.6s ease-out;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-group label {
+        display: block;
+        font-size: 15px;
+        font-weight: 600;
+        color: #2C3E50;
+        margin-bottom: 10px;
+        letter-spacing: 0.3px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 14px 18px;
+        border: 2px solid #e9ecef;
+        border-radius: 10px;
+        font-size: 15px;
+        color: #2C3E50;
+        transition: all 0.3s ease;
+        background: #f8f9fa;
+    }
+
+    .form-control:focus {
+        outline: none;
+        border-color: #FB246A;
+        background: white;
+        box-shadow: 0 0 0 4px rgba(251, 36, 106, 0.1);
+    }
+
+    .form-control::placeholder {
+        color: #95a5a6;
+    }
+
+    select.form-control {
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23FB246A' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 18px center;
+        padding-right: 45px;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .btn-success {
+        background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+        color: white;
+        padding: 14px 32px;
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+        letter-spacing: 0.3px;
+    }
+
+    .btn-success:hover {
+        background: linear-gradient(135deg, #229954 0%, #1e8449 100%);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
+    }
+
+    .btn-success:active {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+    }
+
+    .btn-secondary {
+        background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+        color: white;
+        padding: 14px 32px;
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 4px 15px rgba(149, 165, 166, 0.3);
+        letter-spacing: 0.3px;
+    }
+
+    .btn-secondary:hover {
+        background: linear-gradient(135deg, #7f8c8d 0%, #6c7a7b 100%);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(149, 165, 166, 0.4);
+        color: white;
+        text-decoration: none;
+    }
+
+    .btn-secondary:active {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 15px rgba(149, 165, 166, 0.3);
+    }
+
+</style>
+
+<div class="edit-container">
+    <div class="page-header">
+        <h1>✏️ Edit Vacancy</h1>
+    </div>
+
+    <div class="form-card">
+        <form asp-area="Admin"
+              asp-controller="Admin"
+              asp-action="EditVacancy"
+              method="post">
+
+            @Html.AntiForgeryToken()
+
+            <input type="hidden" asp-for="VacancyId" />
+
+            <div class="form-group">
+                <label>Title</label>
+                <input asp-for="Title" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label>Department</label>
+                <select asp-for="DepartmentId"
+                        asp-items="ViewBag.Departments"
+                        class="form-control"
+                        required>
+                    <option value="">Select Department</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Total Openings</label>
+                <input asp-for="TotalOpenings"
+                       type="number"
+                       min="1"
+                       class="form-control"
+                       required />
+            </div>
+
+            <div class="form-group">
+                <label>Status</label>
+                <select asp-for="Status" class="form-control" required>
+                    <option value="">Select Status</option>
+                    <option value="Open">Open</option>
+                    <option value="Closed">Closed</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn-success">Update</button>
+                <a asp-area="Admin"
+                   asp-controller="Admin"
+                   asp-action="Vacancies"
+                   class="btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

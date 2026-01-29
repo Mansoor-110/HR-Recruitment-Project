@@ -25,7 +25,7 @@
                 </li>
 
                 <li>
-                    <a asp-action="Index" asp-controller="Admin" >
+                    <a asp-action="Index" asp-controller="Admin">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -52,7 +52,7 @@
                 </li>
 
                 <li>
-                    <a asp-action="Applications" asp-controller="Admin" >
+                    <a asp-action="Applications" asp-controller="Admin">
                         <span class="icon">
                             <ion-icon name="help-outline"></ion-icon>
                         </span>
@@ -61,7 +61,32 @@
                 </li>
 
                 <li>
-                    <a asp-action="ComplaintsList" asp-controller="Admin" >
+                    <a asp-action="FinalDecision" asp-controller="Admin">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Selected Candidates</span>
+                    </a>
+                </li>
+                <li>
+                    <a asp-action="Vacancies" asp-controller="Admin">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Manage Vacancies</span>
+                    </a>
+                </li>
+                <li>
+                    <a asp-action="Departments" asp-controller="Admin">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Manage Departments</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a asp-action="ComplaintsList" asp-controller="Admin">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
@@ -69,9 +94,9 @@
                     </a>
                 </li>
 
-           
 
-           
+
+
 
                 <li>
                     <a asp-action="Logout" asp-controller="Auth">
@@ -83,17 +108,17 @@
                 </li>
             </ul>
         </div>
-        </div>
+    </div>
 
-        @RenderBody()
+    @RenderBody()
 
 
-        <!-- =========== Scripts =========  -->
-        <script src="assets/js/main.js"></script>
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/main.js"></script>
 
-        <!-- ====== ionicons ======= -->
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

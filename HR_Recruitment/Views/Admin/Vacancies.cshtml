@@ -1,0 +1,294 @@
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model List<HR_Recruitment.Models.Vacancy>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .vacancies-container {
+        padding: 40px;
+        margin-left: 300px;
+        background: #F2F2F2;
+        min-height: 100vh;
+    }
+
+    .page-header {
+        margin-bottom: 35px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        animation: slideDown 0.5s ease-out;
+    }
+
+    .page-header h1 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #2C3E50;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        letter-spacing: -0.5px;
+    }
+
+    .btn-add {
+        background: linear-gradient(135deg, #FB246A 0%, #D91F5E 100%);
+        color: white;
+        padding: 12px 28px;
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 4px 15px rgba(251, 36, 106, 0.3);
+        letter-spacing: 0.3px;
+    }
+
+    .btn-add:hover {
+        background: linear-gradient(135deg, #D91F5E 0%, #B01848 100%);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(251, 36, 106, 0.4);
+        color: white;
+        text-decoration: none;
+    }
+
+    .table-card {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+        animation: fadeInUp 0.6s ease-out;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .table-header {
+        padding: 25px 30px;
+        background: linear-gradient(135deg, #FB246A 0%, #D91F5E 100%);
+        border-bottom: none;
+    }
+
+    .table-header h2 {
+        font-size: 22px;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+        letter-spacing: 0.3px;
+    }
+
+    .vacancies-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+    }
+
+    .vacancies-table thead {
+        background: linear-gradient(to right, #f8f9fa, #e9ecef);
+        border-bottom: 3px solid #FB246A;
+    }
+
+    .vacancies-table thead th {
+        padding: 18px 25px;
+        text-align: left;
+        font-weight: 700;
+        font-size: 13px;
+        color: #495057;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .vacancies-table tbody tr {
+        border-bottom: 1px solid #e9ecef;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+
+    .vacancies-table tbody tr:hover {
+        background: linear-gradient(to right, #fff5f9, #ffffff);
+        box-shadow: 0 4px 15px rgba(251, 36, 106, 0.1);
+        transform: translateX(5px);
+    }
+
+    .vacancies-table tbody tr:hover::before {
+        transform: scaleY(1);
+    }
+
+    .vacancies-table tbody tr:last-child {
+        border-bottom: none;
+    }
+
+    .vacancies-table tbody td {
+        padding: 20px 25px;
+        font-size: 15px;
+        color: #2C3E50;
+        vertical-align: middle;
+    }
+
+    .vacancies-table tbody td:nth-child(1) {
+        font-weight: 600;
+        color: #2C3E50;
+        font-size: 16px;
+    }
+
+    .vacancies-table tbody td:nth-child(2) {
+        color: #5a6c7d;
+        font-weight: 500;
+    }
+
+    .vacancies-table tbody td:nth-child(3) {
+        color: #8492a6;
+        font-weight: 500;
+    }
+
+    .status-badge {
+        display: inline-block;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+
+    .status-open {
+        background: linear-gradient(135deg, #55efc4 0%, #00b894 100%);
+        color: #155724;
+    }
+
+    .status-closed {
+        background: linear-gradient(135deg, #fab1a0 0%, #ff7675 100%);
+        color: #721C24;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .btn-edit {
+        background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+        color: white;
+        padding: 8px 18px;
+        border: none;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        box-shadow: 0 3px 10px rgba(52, 152, 219, 0.3);
+    }
+
+    .btn-edit:hover {
+        background: linear-gradient(135deg, #2980b9 0%, #21618c 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        color: white;
+        text-decoration: none;
+    }
+
+    .btn-delete {
+        background: linear-gradient(135deg, #FB246A 0%, #D91F5E 100%);
+        color: white;
+        padding: 8px 18px;
+        border: none;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        box-shadow: 0 3px 10px rgba(251, 36, 106, 0.3);
+    }
+
+    .btn-delete:hover {
+        background: linear-gradient(135deg, #D91F5E 0%, #B01848 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(251, 36, 106, 0.4);
+        color: white;
+        text-decoration: none;
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 80px 20px;
+        color: #95a5a6;
+        animation: fadeIn 0.6s ease-out;
+    }
+
+    .empty-state i {
+        font-size: 80px;
+        color: #dfe6e9;
+        margin-bottom: 25px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .empty-state p {
+        font-size: 20px;
+        margin: 0;
+        font-weight: 500;
+        color: #7f8c8d;
+    }
+
+</style>
+
+<div class="vacancies-container">
+    <div class="page-header">
+        <h1>💼 Vacancies</h1>
+        <a asp-action="AddVacancy" class="btn-add">+ Add Vacancy</a>
+    </div>
+
+    <div class="table-card">
+        <div class="table-header">
+            <h2>All Vacancies</h2>
+        </div>
+
+        @if (Model != null && Model.Any())
+        {
+            <table class="vacancies-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Department</th>
+                        <th>Openings</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var v in Model)
+                    {
+                        <tr>
+                            <td>@v.Title</td>
+                            <td>@v.Department.DepartmentName</td>
+                            <td>@v.TotalOpenings</td>
+                            <td>
+                                <span class="status-badge status-@(v.Status.ToLower())">@v.Status</span>
+                            </td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a asp-action="EditVacancy" asp-route-id="@v.VacancyId" class="btn-edit">Edit</a>
+                                    <a asp-action="DeleteVacancy" asp-route-id="@v.VacancyId" class="btn-delete" onclick="return confirm('Are you sure you want to delete this vacancy?');">Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div class="empty-state">
+                <i class="fas fa-briefcase"></i>
+                <p>No vacancies found</p>
+            </div>
+        }
+    </div>
+</div>
